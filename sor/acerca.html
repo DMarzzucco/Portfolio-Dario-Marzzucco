@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psicoterapia Individual</title>
+    <link rel="icon" href="icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!--main container-->
+    <main class="container-sections">
+        <header class="cabezal-sections">
+            <div class="logo">
+                <a href="index.html"> <img src="logo.png" alt=""></a>
+            </div>
+            <nav id="nav">
+                <ul class="nav-list">
+                    <li><a href="acerca.html">Acerca de mi</a></li>
+                    <li><a href="servicio.html">Servicios</a></li>
+                    <li><a href="ubicacion.html">Ubicacion</a></li>
+                    <li><a href="formulario.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="showAndHideM()">
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+        </header>
+
+        <!--contenido-->
+        <section class="cont-about">
+            <h1>¿Quien Soy?</h1>
+            <div class="buttones">
+                <button class="tab-button" onclick="openTab('tab1')">Titulo Universitario <span class="overlay"></span></button>
+                <button class="tab-button" onclick="openTab('tab2')">Actualizaciones Profesionales<span class="overlay"></span></button>
+                <button class="tab-button" onclick="openTab('tab3')">Experiencias Laborales<span class="overlay"></span></button>
+                <button class="tab-button" onclick="openTab('tab4')">Practicas Docente<span class="overlay"></span></button>
+                <button class="tab-button" onclick="openTab('tab5')">Practicas Supervisadas<span class="overlay"></span></button>
+            </div>
+            <div class="contenido-tab">
+                <!--titulo-->
+                <div class="tab active" id="tab1">
+                    <h2>Titulo</h2>
+                        <li><h3>Licenciatura en Psicologia</h3>
+                        <p>Universidad Nacional de Cordoba</p></li>
+                        <li><h3>Diplomado en Prevencion en Violencia de Genero</h3>
+                        <p>Universidad Nacional de Villa Maria</p></li>
+                </div>
+                <!--actualizaciones-->
+                <div class="tab" id="tab2">
+                    <h2>Actualizaciones Profesionales</h2>            
+                        <li><p>“El aborto en Argentina" (segunda camada) Primer tramo - 2023 Herramientas conceptuales y operativas para la implementación plena de la Ley 27.610”, realizado desde la plataforma UNPFA Argentina con una duración de 30 horas, julio 2023.</p></li>
+                        <li><p>“Curso Virtual mhGAP Humanitario”; a través del Campus Virtual de Salud Pública, Organización Panamericana de la Salud, julio 2023.</p></li>
+                        <li><p>Violencias por Motivos de género. Aproximación a herramientas para equipos de salud. 7° Edicion”, Plataforma Virtual de Salud, 20hs, junio 2023.</p></li>
+                        <li><p>Prevención de la Autolesión y el Suicidio: Empoderamiento de los Profesionales de Atención Primaria de Salud”, Organización Panamericana de la Salud a través del Campus Virtual de Salud Pública, junio de 2023.</p></li>
+                        <li><p>18° Jornadas Regionales del Litoral “Infancias y Adolescencias Pospandemia”, 26 y 27 de agosto 2022, Venado Tuerto. SAP</p></li>
+                        <li><p>Curso virtual "Historia clínica y Consentimiento informado: normativa vigente en salud mental y adicciones. El nuevo código civil y comercial", realizado entre marzo y mayo de 2022, acreditando 62hs catedra. Hospital Nacional Lic. Bonaparte.</p></li>
+                        <li><p>Cuarto Encuentro en el marco
+                </div>
+                <!--experiencias-->
+                <div class="tab" id="tab3">
+                    <h2>Experiencias Laboral</h2>
+                    <li><p>Atención en Centro de Salud Dr Vidalle, Murphy, desde febrero de 2014 hasta la
+                        actualidad.</p></li>
+                    <li><p>Coordinadora del Espacio de Primera Infancia “Norma Lilian Caffa”, Murphy, desde
+                        enero del año 2018 hasta el año 2020.</p></li>
+                    <li><p>Consultorio privado, Clinica Arias, desde 2006 hasta 2020. Arias provincia de
+                        Córdoba.</p></li>
+                    <li><p>Acompañamientos Terapéuticos en Salud Mental para el Servicio Social de la
+                        localidad de Murphy</p></li>
+                    <li><p>Acompañamientos Personalizados para el Servicio Local de Niñez, Adolescencia y
+                        Familia. Murphy.</p></li>
+                    <li><p>Coordinación Taller para Jóvenes con Discapacidad dependiente de Acción Social de
+                        la Comuna de Murphy, 2016</p></li>
+                    <li><p>Coordinación de Acompañantes Terapéuticos durante la internación de paciente adolescente en el Hospital Regional Dr, Ricardo Gutierrez, Venado Tuerto, año 2016.</p></li>
+                </div>
+                <!--doscent-->
+                <div class="tab" id="tab4">
+                    <h2>Practicas como Docente</h2>
+                    <li><p> Ayudantía-alumno ad-honorem aprobada mediante resolución N° 726/03, realizada
+                        en la Cátedra de Psicoanálisis de la Facultad de Psicología. Universidad Nacional de
+                        Córdoba.
+                        </p></li>
+                    <li><p>Agregada ad-honorem en la Cátedra de Psicología Evolutiva de la Facultad de
+                        Odontología, UNC.
+                        </p></li>
+                </div>
+                <!--supervisaci-->
+                <div class="tab" id="tab5">
+                    <li><p> Prácticas Supervisadas en “Climaterio y Menopausia” realizadas en el Hospital
+                        Nacional de Clínicas de la ciudad de Córdoba, año 2006</p></li>
+                </div>
+            </div>
+        </section>
+        
+        <!--footer-->
+        <footer class="footer">    
+            <!--grupo 1-->
+                <div class="grupo1">
+                    <div class="box">
+                        <figure> <!--estsa etiqueta sirve para poner un icono o loogo-->
+                            <a href="#"><img src="footerç.jpg" alt=""></a>
+                        </figure>            
+                    </div>            
+                    <div class="box">
+                        <h2>CONTACTO</h2>
+                        <div class="redes-s">
+                            <p><i class="fa-solid fa-phone"></i>+54 9 3462 56-8958</p>
+                            <p><i class="fa-regular fa-envelope"></i>drrkermazyxokv@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            
+            <!--grupo2-->    
+                <div class="grupo2">
+                    <div class="sour-box">
+                        <a href="#gion al source">source</a>
+                        <a href="#gion a mi pagina">systemarzz</a> 
+                    </div>
+                </div>
+            
+            <!--grupo3-->
+                <div class="grupo3">
+                    <small>&copy; 2023 <b>Psicoterapia Individual-SysteMarzz</b> - Todos los Derechos Reservados. </small>
+                </div>
+            </footer>
+            
+    </main>
+</body>
+<script src="script.js"></script>
+</html>
