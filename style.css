@@ -104,6 +104,7 @@ html, body{
     width: 328px;
     height: 70px;
 }
+/*  */
 .nav-list{
     display: flex;
     justify-content: space-between;
