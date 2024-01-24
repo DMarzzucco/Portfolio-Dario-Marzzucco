@@ -1,23 +1,34 @@
-//nav  
-let menuVisible = false;
-function showAndHideM (){
-    if (menuVisible){
-        document.getElementById("nav").classList="";
-        menuVisible=false;
-    }else{
-        document.getElementById("nav").classList="responsive";
-        menuVisible=true;
+// redir
+function clk(sde) {
+    window.location.href = sde;
+}
+// enlaces
+function rk(lru){
+    // declarar
+    if (lru && lru !== '#'){
+        window.location.href = lru;
     }
 }
-function selecionar(){
-    document.getElementById("nav").classList ="";
-    menuVisible=false;
+//nav  
+let menuVisible = false;
+function showAndHideM() {
+    if (menuVisible) {
+        document.getElementById("nav").classList = "";
+        menuVisible = false;
+    } else {
+        document.getElementById("nav").classList = "responsive";
+        menuVisible = true;
+    }
+}
+function selecionar() {
+    document.getElementById("nav").classList = "";
+    menuVisible = false;
 }
 //tab about
 function openTab(tabName) {
     // Ocultar todas las pestañas
     var tabs = document.querySelectorAll('.tab');
-    tabs.forEach(function(tab) {
+    tabs.forEach(function (tab) {
         tab.classList.remove('active');
     });
 

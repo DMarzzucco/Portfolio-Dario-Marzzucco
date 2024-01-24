@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Psicoterapia Individual</title>
     <link rel="icon" href="icon.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <!--main container-->
@@ -25,8 +29,10 @@
             <section class=" header-inicio">
                 <div class="wave">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                        <path fill="#ffffff" fill-opacity="1" d="M0,64L60,74.7C120,85,240,107,360,122.7C480,139,600,149,720,138.7C840,128,960,96,1080,101.3C1200,107,1320,149,1380,170.7L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
-                      </svg>                    
+                        <path fill="#ffffff" fill-opacity="1"
+                            d="M0,64L60,74.7C120,85,240,107,360,122.7C480,139,600,149,720,138.7C840,128,960,96,1080,101.3C1200,107,1320,149,1380,170.7L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
+                        </path>
+                    </svg>
                 </div>
                 <div class="inic-h">
                     <h1>Maricel Sovran</h1>
@@ -39,52 +45,61 @@
         los servicios, 
         datos de contacto, ubicacion y un formulario (PHP) -->
         <div class="contenido">
-            <!--inicio-->           
-            <section class="ini-resent">                              
+            <!--inicio-->
+            <section class="ini-resent">
                 <!--navegacion de inicio-->
-                <div class="nav-incio" id="menu">
+
+                <!-- <div class="nav-incio" id="menu">
                     <a href="acerca.html">Acerca de mi</a>
                     <a href="servicio.html">Servicios</a>
                     <a href="ubicacion.html">Ubicacion</a>
                     <a href="formulario.html">Contacto</a>
+                </div> -->
+
+                <div class="nav-i">
+                    <button class="b-t" onclick="clk('acerca.html')">Acerca de mi</button>
+                    <button class="b-t" onclick="clk('servicio.html')">Servicios</button>
+                    <button class="b-t" onclick="clk('ubicacion.html')">Ubicacion</button>
+                    <button class="b-t" onclick="clk('formulario.html')">Contacto</button>
                 </div>
-            </section>                                     
+            </section>
         </div>
-        
+
         <!--footer-->
         <footer class="footer">
-    
+
             <!--grupo 1-->
-                <div class="grupo1">
-                    <div class="box1">
-                        <figure> <!--estsa etiqueta sirve para poner un icono o loogo-->
-                            <a href="#"><img src="footerç.jpg" alt=""></a>
-                        </figure>            
-                    </div>            
-                    <div class="box">
-                        <h2>CONTACTO</h2>
-                        <div class="redes-s">
-                            <p><i class="fa-solid fa-phone"></i>+54 9 3462 56-8958</p>
-                            <p><i class="fa-regular fa-envelope"></i>drrkermazyxokv@gmail.com</p>
-                        </div>
+            <div class="grupo1">
+                <div class="box1">
+                    <figure> <!--estsa etiqueta sirve para poner un icono o loogo-->
+                        <a href="#"><img src="footerç.jpg" alt=""></a>
+                    </figure>
+                </div>
+                <div class="box">
+                    <h2>CONTACTO</h2>
+                    <div class="redes-s">
+                        <p><i class="fa-solid fa-phone"></i>+54 9 3462 56-8958</p>
+                        <p><i class="fa-regular fa-envelope"></i>drrkermazyxokv@gmail.com</p>
                     </div>
                 </div>
-            
-            <!--grupo2-->    
-                <div class="grupo2">
-                    <div class="sour-box">
-                        <a href="#gion al source">source</a>
-                        <a href="#gion a mi pagina">systemarzz</a> 
-                    </div>
+            </div>
+
+            <!--grupo2-->
+            <div class="grupo2">
+                <div class="sour-box">
+                    <a href="#" onclick="rk ('https://github.com/DMarzzucco/sorciere.git')">source</a>
+                    <a href="#" onclick="rk ('https://systemarzz.netlify.app/')">systemarzz</a>
                 </div>
-            
+            </div>
+
             <!--grupo3-->
-                <div class="grupo3">
-                    <small>&copy; 2023 <b>Psicoterapia Individual-SysteMarzz</b> - Todos los Derechos Reservados. </small>
-                </div>
-            </footer>
+            <div class="grupo3">
+                <small>&copy; 2023 <b>Psicoterapia Individual-SysteMarzz</b> - Todos los Derechos Reservados. </small>
+            </div>
+        </footer>
 
     </main>
 </body>
 <script src="script.js"></script>
+
 </html>
