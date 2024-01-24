@@ -1,14 +1,17 @@
-
-*{
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;}
-html, body{
+    box-sizing: border-box;
+}
+
+html,
+body {
     margin: 0;
     padding: 0;
 }
+
 /*container*/
-.container{
+.container {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -19,38 +22,43 @@ html, body{
 }
 
 /*header*/
-.cabezal{
+.cabezal {
     align-items: center;
     display: flex;
     flex-direction: column;
     width: 100%;
     padding: 0;
     background:
-    url(/20230816_102845-01~2_20231020114020797.jpg);
+        url(/20230816_102845-01~2_20231020114020797.jpg);
     position: static;
 }
-.cabezal .logo{
+
+.cabezal .logo {
     display: flex;
     flex-wrap: wrap;
 }
-.cabezal img{
+
+.cabezal img {
     width: 328px;
     height: 70px;
-} 
-.text-h{
+}
+
+.text-h {
     display: flex;
     flex-wrap: wrap;
     text-align: left;
     padding: 20px 20px;
-    margin:auto;
+    margin: auto;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 70px;
     color: white;
 }
-.text-h p{
+
+.text-h p {
     font-size: 30px;
 }
-.header-inicio{
+
+.header-inicio {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -60,12 +68,13 @@ html, body{
 
 }
 
-.wave{
+.wave {
     bottom: 0;
     width: 100%;
     margin: -8px;
 }
-.inic-h{
+
+.inic-h {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -73,11 +82,13 @@ html, body{
     width: 100%;
     background: white
 }
-.inic-h h1{
+
+.inic-h h1 {
     font-size: 50px;
 }
+
 /*header sections*/
-.container-sections{
+.container-sections {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -85,41 +96,49 @@ html, body{
     background-position: center;
     background-size: cover;
 }
-.cabezal-sections{
+
+.cabezal-sections {
     display: flex;
     justify-content: space-between;
     background-color: rgb(51, 34, 83);
 }
-.cabezal-sections li{
+
+.cabezal-sections li {
     display: inline-block;
     padding: 10px 10px;
     margin: 20px;
 }
-.cabezal-sections a{
+
+.cabezal-sections a {
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
 }
-.cabezal-sections .logo img{
+
+.cabezal-sections .logo img {
     width: 328px;
     height: 70px;
 }
+
 /*  */
-.nav-list{
+.nav-list {
     display: flex;
     justify-content: space-between;
 }
-.nav-responsive{
+
+.nav-responsive {
     display: none;
 }
+
 /*inicio*/
-.nav-incio{
+.nav-incio {
     width: 100%;
     background-color: white;
     display: flex;
     justify-content: space-between;
     padding: 80px 80px;
 }
+
 .nav-incio {
     background-color: white;
     padding: 10px 20px;
@@ -129,14 +148,15 @@ html, body{
     width: 100%;
 }
 
-.nav-incio a{
+.nav-incio a {
     margin: 20px;
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
     color: black;
 }
+
 /*about*/
-.cont-about{
+.cont-about {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -146,19 +166,22 @@ html, body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: aqua;
 }
-.contenido-tab{
+
+.contenido-tab {
     margin: 0;
     padding: 20px 20px;
 }
-.buttones{
+
+.buttones {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px 10px;
 }
-.tab-button{
+
+.tab-button {
     padding: 10px 20px;
-    margin:0;
+    margin: 0;
     border: 1px solid white;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #332253;
@@ -167,6 +190,7 @@ html, body{
     display: block;
     z-index: 10;
 }
+
 /*
 .buttones button .overlay{
     position: absolute;
@@ -180,7 +204,7 @@ html, body{
     width: 100%;
 }
 */
-.tab{
+.tab {
     display: none;
     border-radius: 20px;
     background-color: white;
@@ -190,9 +214,11 @@ html, body{
     margin: 10px;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 .active {
     display: block;
 }
+
 /*servicios*/
 .servicios {
     height: 100vh;
@@ -203,10 +229,12 @@ html, body{
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
 }
-.servicios h1{
+
+.servicios h1 {
     padding: 20px 20px;
 }
-.serv-list{
+
+.serv-list {
     padding: 20px 20px;
     display: flex;
     flex-direction: column;
@@ -217,13 +245,70 @@ html, body{
     background-color: white;
     border-radius: 20px;
 }
+
 /*ubication*/
-.ubication{
+.ubication {
     height: 100vh;
     background-color: aquamarine;
 }
+
+/* contacto */
+.contacto {
+    width: 100%;
+    height: 100%;
+    background-color:#111417;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contacto .kopf{
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 10px 10px;
+    margin: 9px;
+}
+.contacto .kopf span{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.contacto h2{
+    font-size: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: white;
+}
+
+.contacto .col {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px;
+    align-items: center;
+}
+
+.contacto .col input {
+    width: 350px;
+    height: 50px;
+    padding: 9px 9px;
+    margin: 9px;
+    font-size: large;
+}
+
+.contacto .col textarea {
+    width: 350px;
+    height: auto;
+    padding: 9px 9px;
+    margin: 9px;
+    font-size: large;
+}
+
 /*footer*/
-footer{
+footer {
     width: 100%;
     background-color: #1B2024;
     color: white;
@@ -231,39 +316,46 @@ footer{
     margin: 0;
 }
 
-footer .grupo1{
+footer .grupo1 {
     width: 100%;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 40px 40px;
 }
-figure img{
+
+figure img {
     height: 200px;
     width: 370px;
-}        
-figure{
+}
+
+figure {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-footer .redes-s{
+
+footer .redes-s {
     display: inline-block;
     margin-right: 10px;
 }
-footer .redes-s i{
+
+footer .redes-s i {
     padding: 10px 10px;
 }
-footer .redes-s a{
-    color:#B6C2DC;
+
+footer .redes-s a {
+    color: #B6C2DC;
 }
-footer .grupo2 .sour-box{
+
+footer .grupo2 .sour-box {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px 10px;
 }
-footer .grupo2 a{
+
+footer .grupo2 a {
     display: flex;
     margin: auto;
     text-decoration: underline;
@@ -271,58 +363,66 @@ footer .grupo2 a{
     text-align: center;
 }
 
-@media  (max-width: 700px){
-    .cabezal-sections{
+@media (max-width: 700px) {
+    .cabezal-sections {
         display: flex;
         background-color: rgb(51, 34, 83);
         padding: 10px 10px;
     }
-    nav{
+
+    nav {
         display: none;
-      }
-      .nav-responsive{
+    }
+
+    .nav-responsive {
         display: block;
-      }
-      nav.responsive{
-        display:block;
+    }
+
+    nav.responsive {
+        display: block;
         position: absolute;
         right: 0;
         top: 13%;
-        background-color:#332253;
+        background-color: #332253;
         width: 180px;
-      }
-      .nav-responsive i{
+    }
+
+    .nav-responsive i {
         padding: 20px 20px;
         font-size: 25px;
         color: white;
-      }
-      nav.responsive ul{
-        display: block;
-      }
-      nav.responsive ul li{
-        padding: 10px 0;
-      }
-
     }
 
-    
+    nav.responsive ul {
+        display: block;
+    }
+
+    nav.responsive ul li {
+        padding: 10px 0;
+    }
+
+}
+
+
 
 @media (max-width: 768px) {
-    .text-h{
+    .text-h {
         display: flex;
         flex-wrap: wrap;
         text-align: left;
         padding: 20px 20px;
-        margin:auto;
+        margin: auto;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 50px;
         color: white;
         margin: 0;
     }
-    .text-h p{
+
+    .text-h p {
         font-size: 30px;
     }
-    .inic-h{
+
+    .inic-h {
         display: flex;
         flex-direction: column;
         text-align: center;
@@ -330,11 +430,13 @@ footer .grupo2 a{
         width: 100%;
         background: white;
     }
-    .wave{
+
+    .wave {
         bottom: 0;
         width: 100%;
         margin: -8px;
     }
+
     .herramientas {
         width: 100%;
         padding: 10px;
@@ -347,27 +449,31 @@ footer .grupo2 a{
     .tab {
         width: 100%;
     }
+
     /*inicio*/
-    .nav-incio{
+    .nav-incio {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items:center;
+        align-items: center;
     }
-    .nav-incio a{
+
+    .nav-incio a {
         border: 2px solid rgb(22, 28, 77);
         border-radius: 20px;
         padding: 10px 10px;
     }
+
     /*footer*/
-    footer{
+    footer {
         width: 100%;
         background-color: #1B2024;
         color: white;
         font-family: Arial, Helvetica, sans-serif;
         margin: 0;
     }
-    footer .grupo1{
+
+    footer .grupo1 {
         width: 100%;
         margin: auto;
         display: grid;
@@ -375,59 +481,69 @@ footer .grupo2 a{
         grid-gap: 30px;
         padding: 20px 20px;
     }
-    .box1{
+
+    .box1 {
         display: flex;
-        justify-content:center;
+        justify-content: center;
         align-items: center;
         margin: auto;
     }
-    figure{
+
+    figure {
         height: 70px;
         width: 240px;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    figure img{
+
+    figure img {
         height: 100px;
         width: 200px;
         align-items: center;
     }
-    footer .box{
+
+    footer .box {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
     }
-    footer .redes-s{
+
+    footer .redes-s {
         display: inline-block;
         margin-right: 10px;
     }
-    footer .redes-s i{
+
+    footer .redes-s i {
         padding: 10px 10px;
     }
-    footer .redes-s a{
-        color:#B6C2DC;
+
+    footer .redes-s a {
+        color: #B6C2DC;
     }
-    footer .grupo2 .sour-box{
+
+    footer .grupo2 .sour-box {
         display: flex;
         justify-content: center;
         align-items: center;
         margin: 10px;
         padding: 10px 10px;
     }
-    footer .grupo2 a{
+
+    footer .grupo2 a {
         display: flex;
         margin: auto;
         text-decoration: underline;
         color: #B6C2DC;
         text-align: center;
     }
-    footer .grupo3{
+
+    footer .grupo3 {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color:#111417;
+        background-color: #111417;
     }
 }
