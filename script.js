@@ -35,3 +35,10 @@ function openTab(tabName) {
     // Mostrar la pestaña seleccionada
     document.getElementById(tabName).classList.add('active');
 }
+// 
+function gogleMap(lp){
+    // declarar
+    if (lp && lp !== '#'){
+        window.location.href = lp;
+    }
+}

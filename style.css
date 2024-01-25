@@ -28,8 +28,9 @@ body {
     flex-direction: column;
     width: 100%;
     padding: 0;
-    background:
-        url(/20230816_102845-01~2_20231020114020797.jpg);
+    background: linear-gradient(#1b2024cc, #1b20241f), url(img/index.jpeg);
+    background-position: center;
+    background-size: cover;
     position: static;
 }
 
@@ -45,7 +46,7 @@ body {
 
 .text-h {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     text-align: left;
     padding: 20px 20px;
     margin: auto;
@@ -56,6 +57,7 @@ body {
 
 .text-h p {
     font-size: 30px;
+    text-align: right;
 }
 
 .header-inicio {
@@ -84,7 +86,7 @@ body {
 }
 
 .inic-h h1 {
-    font-size: 50px;
+    font-size: 80px;
 }
 
 /*header sections*/
@@ -113,6 +115,20 @@ body {
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
+    transition: 0.5s;
+}
+
+.cabezal-sections a:hover {
+    color: #1B2024;
+    background-color: white;
+    border-radius: 20px;
+    padding: 9px 9px;
+}
+
+.cabezal-sections .logo button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
 }
 
 .cabezal-sections .logo img {
@@ -131,7 +147,7 @@ body {
 }
 
 /*inicio*/
-.nav-incio {
+.nav-i {
     width: 100%;
     background-color: white;
     display: flex;
@@ -139,20 +155,31 @@ body {
     padding: 80px 80px;
 }
 
-.nav-incio {
+.nav-i {
     background-color: white;
     padding: 10px 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding: 80px 80px;
     width: 100%;
 }
 
-.nav-incio a {
-    margin: 20px;
-    text-decoration: none;
+.nav-i button {
+    margin: 9px;
     font-family: Arial, Helvetica, sans-serif;
-    color: black;
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.nav-i button:hover {
+    background-color: #111417;
+    color: white;
+    transform: scale(1.1);
+    padding: 9px 9px;
+    border-radius: 10px;
 }
 
 /*about*/
@@ -191,19 +218,6 @@ body {
     z-index: 10;
 }
 
-/*
-.buttones button .overlay{
-    position: absolute;
-    width: 0;
-    height: 100%;
-    background-color: aqua;
-    z-index: -1;
-    transition: 1s;
-}
-.buttones button:hover .overlay{
-    width: 100%;
-}
-*/
 .tab {
     display: none;
     border-radius: 20px;
@@ -249,20 +263,83 @@ body {
 /*ubication*/
 .ubication {
     height: 100vh;
-    background-color: aquamarine;
-}
-
-/* contacto */
-.contacto {
-    width: 100%;
-    height: 100%;
-    background-color:#111417;
+    background: linear-gradient(rgba(51, 34, 83, 0.829), rgba(51, 34, 83, 0)), url(img/ubicacion.jpg);
+    background-position: 50% 70%;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.contacto .kopf{
+
+.ubication h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 60px;
+    padding: 20px 20px;
+    color: white;
+}
+
+.ubication .u-cont {
+    display: grid;
+    grid-template-columns: repeat(2, 10fr);
+    background-color: rgba(255, 255, 255, 0.733);
+    width: auto;
+    padding: 20px 20px;
+    border-radius: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #39393a;
+}
+
+.ubication .dt {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.ubication .dt li {
+    list-style: none;
+    margin: 8px;
+}
+
+.ubication .dt .tl {
+    margin-left: -99px;
+}
+
+.ubication .dt p {
+    margin-left: 17px;
+}
+
+.ubication button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.ubication button:hover {
+    scale: 1.1;
+}
+
+.ubication .enl img {
+    width: 200px;
+    height: 254px;
+}
+
+/* contacto */
+.contacto {
+    width: 100%;
+    height: auto;
+    background-color: #251434;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacto .kopf {
     width: 360px;
     display: flex;
     flex-direction: column;
@@ -272,12 +349,14 @@ body {
     padding: 10px 10px;
     margin: 9px;
 }
-.contacto .kopf span{
+
+.contacto .kopf span {
     font-size: 30px;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
 }
-.contacto h2{
+
+.contacto h2 {
     font-size: 60px;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
@@ -364,6 +443,7 @@ footer .grupo2 a {
 }
 
 @media (max-width: 700px) {
+
     .cabezal-sections {
         display: flex;
         background-color: rgb(51, 34, 83);
@@ -408,7 +488,7 @@ footer .grupo2 a {
 @media (max-width: 768px) {
     .text-h {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
         text-align: left;
         padding: 20px 20px;
         margin: auto;
@@ -420,6 +500,7 @@ footer .grupo2 a {
 
     .text-h p {
         font-size: 30px;
+        text-align: left;
     }
 
     .inic-h {
@@ -429,6 +510,10 @@ footer .grupo2 a {
         font-family: Arial, Helvetica, sans-serif;
         width: 100%;
         background: white;
+    }
+
+    .inic-h h1 {
+        font-size: 40px;
     }
 
     .wave {
@@ -451,14 +536,14 @@ footer .grupo2 a {
     }
 
     /*inicio*/
-    .nav-incio {
+    .nav-i {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
-    .nav-incio a {
+    .nav-i a {
         border: 2px solid rgb(22, 28, 77);
         border-radius: 20px;
         padding: 10px 10px;
