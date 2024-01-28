@@ -188,12 +188,37 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: auto;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     background-color: aqua;
 }
+.cont-about h1{
+    padding: 10px 10px;
+    font-size: 50px;
+}
 
+/* gd */
+.gd {
+    border-radius: 30px;
+    background-color: white;
+    padding: 9px 9px;
+    display: grid;
+    grid-template-columns: repeat(2, 10fr);
+    grid-gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+/* fd */
+.gd .ft{
+    width: 250px;
+    height: 250px;
+    background: url(img/perf.jpeg);
+    background-position: center;
+    background-size: cover;
+
+}
+/*  */
 .contenido-tab {
     margin: 0;
     padding: 20px 20px;
@@ -224,7 +249,7 @@ body {
     background-color: white;
     padding: 20px 20px;
     height: 100%;
-    width: 1000px;
+    width: auto;
     margin: 10px;
     font-family: Arial, Helvetica, sans-serif;
 }
