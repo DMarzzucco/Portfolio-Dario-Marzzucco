@@ -3,14 +3,7 @@ import { Link } from "react-router-dom";
 function Index() {
     return (
 
-        <main className='container' style={{
-            background: 'linear-gradient(#1b2024cc, #1b20241f),url(/img/index.jpeg)',
-            backgroundPosition: 'center',
-            backgroundSize: 'cover',
-            width: '100%',
-            display: 'flex',
-            flexDirection: 'column',
-        }}>
+        <>
             {/* header */}
             <header className='cabezal'>
                 <div className='logo'>
@@ -51,7 +44,7 @@ function Index() {
                     </div>
                 </div>
             </div>
-        </main>
+        </>
 
     )
 }

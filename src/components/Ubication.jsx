@@ -1,5 +1,4 @@
 import react from "react";
-import Footer from "./Footer";
 function Ubication() {
     return (
         <main>

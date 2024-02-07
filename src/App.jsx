@@ -14,10 +14,15 @@ function App() {
     <Router>
       <Routes>
         {/* index */}
-        <Route path='/' element={<div>
+        <Route path='/' element={<main className='container' style={{
+          background: 'linear-gradient(#1b2024cc, #1b20241f),url(/img/index.jpeg)',
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
+          width: '100%',
+        }}>
           <Index />
           <Footer />
-        </div>} />
+        </main>} />
         {/* about */}
         <Route path="/About" element={<About />} />
         {/* Ubication */}
