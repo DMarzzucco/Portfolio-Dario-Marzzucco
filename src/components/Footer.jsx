@@ -1,4 +1,5 @@
 import react from "react";
+import { Link } from "react-router-dom";
 import "./Footer.css";
 
 function Footer () {
@@ -24,8 +25,8 @@ function Footer () {
         {/* <!--grupo2--> */}
         <div className="grupo2">
             <div className="sour-box">
-                <a href="#">source</a>
-                <a href="#">systemarzz</a>
+                <Link to="https://github.com/DMarzzucco/sorciere.git" className="ennlas">source</Link>
+                <Link to="https://systemarzz.netlify.app/" className="ennlas">systemarzz</Link>
             </div>
         </div>
 

@@ -44,11 +44,13 @@ footer .grupo2 .sour-box {
     align-items: center;
 }
 
-footer .grupo2 a {
+footer .grupo2 a{
+    color: #B6C2DC;
+}
+footer .grupo2 :link {
     display: flex;
     margin: auto;
     text-decoration: underline;
-    color: #B6C2DC;
     text-align: center;
 }
 

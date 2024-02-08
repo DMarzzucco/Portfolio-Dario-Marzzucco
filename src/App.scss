@@ -114,7 +114,7 @@
                 justify-content: space-around;
                 align-items: flex-start;
 
-                button {
+                :link {
                     border: none;
                     background-color: transparent;
                     color: #2d2e44;
@@ -123,8 +123,7 @@
                     transition: 0.5s;
 
                     &:hover {
-                        background: #2d2e44;
-                        color: white;
+                        background: #7f8086;
                         border-radius: 20px;
                         padding: 9px 9px;
                     }
@@ -138,6 +137,7 @@
                 a {
                     text-decoration: none;
                     color: #2d2e44;
+                    padding: 0 10px;
                 }
             }
 

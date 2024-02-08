@@ -7,6 +7,7 @@ import About from './components/About'
 import Ubication from './components/Ubication'
 import Index from './components/Index';
 import Footer from './components/Footer';
+import Header from './components/Header';
 
 function App() {
 
@@ -24,13 +25,20 @@ function App() {
           <Footer />
         </main>} />
         {/* about */}
-        <Route path="/About" element={<About />} />
+        <Route path="/About" element={ <main style={{
+          background:'black'
+        }}>
+          <Header/>
+          <About />
+          <Footer/>
+        </main>
+       } />
         {/* Ubication */}
         <Route path="/Ubication" element={
           <main style={{
-            background: 'black',
-            height: '100vh',
+            background: 'grey',
           }}>
+            <Header/>
             <Ubication />
             <Footer />
           </main>} />
