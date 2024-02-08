@@ -19,7 +19,6 @@ function Header() {
                 <nav>
                     <ul className="nav-list">
                         <Link to="/About">Acerca de Mi</Link>
-                        <a href="">||</a>
                         <Link to="/Ubication">Ubicacion y Turnos</Link>
                     </ul>
                 </nav>

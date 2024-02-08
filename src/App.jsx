@@ -16,7 +16,7 @@ function App() {
       <Routes>
         {/* index */}
         <Route path='/' element={<main className='container' style={{
-          background: 'linear-gradient(#1b2024cc, #1b20241f),url(/img/index.jpeg)',
+          background: 'linear-gradient(#0c0c0cb6, #1b202448),url(/img/index.jpeg)',
           backgroundPosition: 'center',
           backgroundSize: 'cover',
           width: '100%',
@@ -25,20 +25,20 @@ function App() {
           <Footer />
         </main>} />
         {/* about */}
-        <Route path="/About" element={ <main style={{
-          background:'black'
+        <Route path="/About" element={<main style={{
+          background: '#21252c'
         }}>
-          <Header/>
+          <Header />
           <About />
-          <Footer/>
+          <Footer />
         </main>
-       } />
+        } />
         {/* Ubication */}
         <Route path="/Ubication" element={
           <main style={{
-            background: 'grey',
+            background: '#21252c',
           }}>
-            <Header/>
+            <Header />
             <Ubication />
             <Footer />
           </main>} />
