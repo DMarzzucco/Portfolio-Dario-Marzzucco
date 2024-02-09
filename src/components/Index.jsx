@@ -35,11 +35,15 @@ function Index() {
                             <span>Licenciada en Piscología</span>
                         </div>
                         <div className="nav-i">
-                            <Link to='About' className="b-t"><i className="fa-solid fa-user"></i>
-                                Acerca de mi</Link>
+                            <Link to='About#contAbout' className="b-t">
+                                <i className="fa-solid fa-user"></i>
+                                Acerca de mi
+                            </Link>
                             <a href="#">||</a>
-                            <Link to='Ubication#ubication' className="b-t"><i className="fa-solid fa-location-dot"></i>
-                                Ubicacion y Tuno</Link>
+                            <Link to='Ubication#ubication' className="b-t">
+                                <i className="fa-solid fa-phone"></i>
+                                Turno
+                            </Link>
                         </div>
                     </div>
                 </div>

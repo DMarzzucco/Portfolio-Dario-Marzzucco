@@ -47,7 +47,7 @@ export function Tabs() {
                 <ul>
                   <li>Tiempo: 2014 - actuapdad.</li>
                   <li>Ubicación: Murphy, Santa Fe.</li>
-                  <li>Telefóno:</li>
+                  <li>Telefóno: <br /> +54 9 3462 44-1977</li>
                 </ul>
               </div>
               <div className="tlo2">
@@ -56,7 +56,7 @@ export function Tabs() {
                 <ul>
                   <li>Tiempo:2018 - 2020</li>
                   <li>Ubicación:Murphy- Santa fe</li>
-                  <li>Telefóno:</li>
+                  <li>Telefóno: <br /> +54 9 3462 33-3814</li>
                 </ul>
               </div>
               <div className="tlo2">
@@ -65,7 +65,6 @@ export function Tabs() {
                 <ul>
                   <li>Tiempo: 2006-2020</li>
                   <li>Ubicación Aria- Cordoba</li>
-                  <li>Telefóno:</li>
                 </ul>
               </div>
               <div className="tlo2">
@@ -75,7 +74,7 @@ export function Tabs() {
                 <p>Centro Integrador Comunitario</p>
                 <ul>
                   <li>Ubicación:Murphy- Santa Fe</li>
-                  <li>Telefóno:</li>
+                  <li>Telefóno: <br /> +54 9 3462 41-2883</li>
                 </ul>
               </div>
               <div className="tlo2"></div>

@@ -18,8 +18,12 @@ function Header() {
                 {/* nav */}
                 <nav>
                     <ul className="nav-list">
-                        <Link to="/About">Acerca de Mi</Link>
-                        <Link to="/Ubication">Ubicacion y Turnos</Link>
+                        <Link to="/About">
+                            Acerca de mi
+                        </Link>
+                        <Link to="/Ubication">
+                            Turno
+                        </Link>
                     </ul>
                 </nav>
                 {/* respon */}
