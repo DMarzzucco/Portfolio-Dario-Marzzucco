@@ -38,7 +38,7 @@ function Index() {
                             <Link to='About' className="b-t"><i className="fa-solid fa-user"></i>
                                 Acerca de mi</Link>
                             <a href="#">||</a>
-                            <Link to='Ubication' className="b-t"><i className="fa-solid fa-location-dot"></i>
+                            <Link to='Ubication#ubication' className="b-t"><i className="fa-solid fa-location-dot"></i>
                                 Ubicacion y Tuno</Link>
                         </div>
                     </div>

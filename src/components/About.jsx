@@ -1,10 +1,15 @@
 import react from "react";
+import "./Comp.scss";
+import { Tabs } from "./Tabs";
 function About() {
     return (
         <>
-            <div>
-                <h1>About</h1>
-            </div>
+            <section className="contAbout">
+                <h1>¿Quien Soy?</h1>
+                <div className="gd">
+                    <Tabs />
+                </div>
+            </section>
         </>
     )
 

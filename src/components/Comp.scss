@@ -122,3 +122,71 @@
         }
     }
 }
+
+// ABOUT
+.contAbout {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0px;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        font-size: 70px;
+        color: white;
+
+    }
+
+    .gd {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .Tabs {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .tabls {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 8px 0;
+
+                .fot {
+                    width: 70px;
+                    height: 70px;
+                    margin: 0 9px;
+                    background: url(/img/perf.jpeg);
+                    background-position: center;
+                    background-size: cover;
+                    border-radius: 100%;
+                }
+
+                button {
+                    height: 30px;
+                    margin: 0 4px;
+                    border: 1px solid #606264;
+                    border-radius: 16px;
+                    background: #202124;
+                    color: #606264;
+                    font-size: 14px;
+                    cursor: pointer;
+                }
+            }
+
+            .tab-cont {
+                color: white;
+                background: #202124;
+                border-radius: 20px;
+                padding: 9px 9px;
+            }
+        }
+
+
+    }
+}
