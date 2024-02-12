@@ -8,9 +8,9 @@ import Ubication from './components/Ubication'
 import Index from './components/Index';
 import Footer from './components/Footer';
 import Header from './components/Header';
+import { ScrollTop } from './components/ScrollTop';
 
 function App() {
-
   return (
     <Router>
       <Routes>
@@ -28,6 +28,7 @@ function App() {
         <Route path="/About" element={<main style={{
           background: '#21252c'
         }}>
+          <ScrollTop />
           <Header />
           <About />
           <Footer />
@@ -38,6 +39,7 @@ function App() {
           <main style={{
             background: '#21252c',
           }}>
+            <ScrollTop />
             <Header />
             <Ubication />
             <Footer />
