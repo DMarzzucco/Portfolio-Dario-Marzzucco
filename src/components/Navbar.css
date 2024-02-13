@@ -1,10 +1,17 @@
 header {
     width: 100%;
     height: auto;
-    background-color:transparent;
+    background-color: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: static; */
 }
 
 /*  */
@@ -19,14 +26,60 @@ nav .nav-list {
     align-items: center;
 
 }
-nav .nav-list a{
+
+nav .nav-list a {
     font-size: 20px;
-    text-decoration: none;    
+    text-decoration: none;
     color: white;
     padding: 7px 9px;
     margin: 9px;
 }
 
-.nav-respon{
+.n-r {
     display: none;
+}
+
+
+
+
+@media (max-width:500px) {
+    .n-r {
+        display: block;
+    }
+
+    .n-r i {
+        font-size: 25px;
+        margin: 0 3px;
+    }
+
+    .n-r .menu-respon {
+        margin-top: 29px;
+        position: absolute;
+        transform: translateX(-273px);
+        width: 200px;
+        padding: 20px 20px;
+    }
+
+    .n-r .menu-respon .nav-list {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+
+    .n-r .menu-respon .nav-list a {
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        text-align: center;
+        margin: 5px 0;
+        background-color: #212530;
+        border: 1px solid white;
+        border-radius: 10px;
+    }
+
+    nav {
+        display: none;
+    }
+
 }
