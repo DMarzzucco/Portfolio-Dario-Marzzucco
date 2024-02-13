@@ -153,6 +153,70 @@ main {
 }
 
 // responsive
+@media (max-width: 700px) {
+    main {
+        background: #21252c;
+        background-position: 50% 50%;
+        background-size: cover;
+        color: white;
+
+        .cabezal {
+            .text-h {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                h2 {
+                    font-size: 50px;
+                }
+
+                p {
+                    text-align: left;
+                    font-size: 25px;
+                }
+            }
+
+            .header-inicio {
+                .wave {
+                    display: none;
+                }
+            }
+        }
+
+        .contenido {
+            background: linear-gradient(#12131400, #121314);
+            height: 100vh;
+
+            .gr {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: -100px;
+                margin-right: 0;
+
+                .ph {
+                    margin: 0;
+                }
+
+                .inf-gr {
+                    .cn {
+                        h1 {
+                            font-size: 30px;
+                            text-align: center;
+                        }
+                    }
+
+                    .nav-i a {
+                        color: #a0acc2;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
 @media (max-width: 500px) {
     main {
         background: #21252c;
