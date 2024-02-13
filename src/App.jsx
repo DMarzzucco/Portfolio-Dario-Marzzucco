@@ -16,9 +16,6 @@ function App() {
       <Routes>
         {/* index */}
         <Route path='/' element={<main className='container' style={{
-          background: 'linear-gradient(#0c0c0cb6, #1b202448),url(/img/index.jpeg)',
-          backgroundPosition: 'center',
-          backgroundSize: 'cover',
           width: '100%',
         }}>
           <Index />
