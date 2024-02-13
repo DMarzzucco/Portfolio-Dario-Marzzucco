@@ -155,6 +155,8 @@ main {
 // responsive
 @media (max-width: 500px) {
     main {
+        background-position: 50% 50%;
+        background-size: contain;
         .cabezal {
             .text-h {
                 display: flex;
