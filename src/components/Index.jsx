@@ -37,7 +37,7 @@ function Index() {
                         <div className="nav-i">
                             <Link to='About' className="b-t">
                                 <i className="fa-solid fa-user"></i>
-                                Acerca de mi
+                                Acerca de mí
                             </Link>
                             <a href="#">||</a>
                             <Link to='Ubication' className="b-t">

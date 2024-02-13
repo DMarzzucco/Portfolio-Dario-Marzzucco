@@ -155,8 +155,11 @@ main {
 // responsive
 @media (max-width: 500px) {
     main {
+        background: #21252c;
         background-position: 50% 50%;
-        background-size: contain;
+        background-size: cover;
+        color: white;
+
         .cabezal {
             .text-h {
                 display: flex;
@@ -172,14 +175,18 @@ main {
                     font-size: 25px;
                 }
             }
-            .header-inicio{
-                .wave{
+
+            .header-inicio {
+                .wave {
+                    background: linear-gradient(#12131400, #121314);
                     clip-path: none;
                 }
             }
         }
 
         .contenido {
+            background: #121314;
+
             .gr {
                 display: flex;
                 flex-direction: column;
@@ -198,6 +205,9 @@ main {
                             font-size: 30px;
                             text-align: center;
                         }
+                    }
+                    .nav-i a{
+                        color: #a0acc2;
                     }
                 }
 
