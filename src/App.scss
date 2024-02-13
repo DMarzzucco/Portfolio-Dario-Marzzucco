@@ -178,14 +178,14 @@ main {
 
             .header-inicio {
                 .wave {
-                    background: linear-gradient(#12131400, #121314);
-                    clip-path: none;
+                    display: none;
                 }
             }
         }
 
         .contenido {
-            background: #121314;
+            background: linear-gradient(#12131400, #121314);
+            height: 100vh;
 
             .gr {
                 display: flex;
@@ -206,7 +206,8 @@ main {
                             text-align: center;
                         }
                     }
-                    .nav-i a{
+
+                    .nav-i a {
                         color: #a0acc2;
                     }
                 }
