@@ -16,7 +16,7 @@ function Header() {
                         <img src="/img/logo.png" style={{
                             width: '328px',
                             height: '70px',
-                            marginLeft: '20px'
+                            marginLeft: '14px'
                         }} />
                     </Link>
                     <div className="n-r">

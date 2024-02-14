@@ -49,13 +49,13 @@ nav .nav-list a {
 
     .n-r i {
         font-size: 25px;
-        margin: 0 3px;
+        margin: 0 23px;
     }
 
     .n-r .menu-respon {
         margin-top: 29px;
         position: absolute;
-        transform: translateX(-273px);
+        transform: translateX(-241px);
         width: 200px;
         padding: 20px 20px;
     }
