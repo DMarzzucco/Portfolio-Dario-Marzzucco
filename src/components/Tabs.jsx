@@ -8,6 +8,7 @@ export function Tabs() {
   return (
     <>
       <section className="Tabs">
+        <div className="fotResp"></div>
         <div className="tabls">
           <div className="fot"></div>
           <button className={activeTab == 0 ? "active" : ""} onClick={() => selecter(0)}>Titulo Universitario</button>

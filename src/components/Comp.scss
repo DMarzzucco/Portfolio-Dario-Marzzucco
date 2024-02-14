@@ -151,6 +151,10 @@
             justify-content: center;
             align-items: center;
 
+            .fotResp {
+                display: none;
+            }
+
             .tabls {
                 display: flex;
                 justify-content: center;
@@ -207,6 +211,7 @@
         .cont-for {
             .filas {
                 padding: 0 0;
+
                 input {
                     width: 320px;
                 }
@@ -215,6 +220,57 @@
                     width: 320px;
                 }
             }
+        }
+    }
+
+    .contAbout {
+        h1 {
+            font-size: 40px;
+        }
+
+        .gd {
+            .Tabs {
+                .fotResp {
+                    display: block;
+                    width: 70px;
+                    height: 70px;
+                    margin: 0 9px;
+                    background: url(/img/perf.jpeg);
+                    background-position: center;
+                    background-size: cover;
+                    border-radius: 100%;
+
+                }
+
+                .tabls {
+                    border-bottom: 1px solid white;
+
+                    .fot {
+                        display: none;
+                    }
+
+                    button {
+                        height: 40px;
+                        border: none;
+                        background: transparent;
+                    }
+                }
+
+                .tab-cont {
+                    padding: 0 0;
+                    border-radius: 0;
+                }
+            }
+        }
+    }
+    .ubication{
+        h2{
+            font-size: 30px;
+        }
+        .uCont{
+            display: flex;
+            flex-direction: column;
+            border-radius: 0;
         }
     }
 }
