@@ -14,6 +14,12 @@ header {
     /* position: static; */
 }
 
+.logo img {
+    width: 328px;
+    height: 70px;
+    margin-left: 14px;
+}
+
 /*  */
 nav {
     display: flex;
@@ -43,6 +49,11 @@ nav .nav-list a {
 
 
 @media (max-width:500px) {
+    .logo img {
+        width: 252px;
+        height: 55px;
+    }
+
     .n-r {
         display: block;
     }

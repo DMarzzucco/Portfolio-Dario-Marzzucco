@@ -13,11 +13,7 @@ function Header() {
             <header>
                 <div className="logo">
                     <Link to="/">
-                        <img src="/img/logo.png" style={{
-                            width: '328px',
-                            height: '70px',
-                            marginLeft: '14px'
-                        }} />
+                        <img src="/img/logo.png" />
                     </Link>
                     <div className="n-r">
                         <div className="nav-respon" onClick={toggleMenu}>
