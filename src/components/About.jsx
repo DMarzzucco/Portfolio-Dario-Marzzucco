@@ -36,7 +36,7 @@ function About() {
                         </li>
                         <li className="tl">
                             <i className="fa-solid fa-phone"></i>
-                            Numero de Telefono: <br /> +54 9 3463 41-1187
+                            Número de Teléfono: <br /> +54 9 3463 41-1187
                         </li>
                     </div>
                 </div >

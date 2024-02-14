@@ -44,9 +44,12 @@ footer .grupo2 .sour-box {
     align-items: center;
 }
 
-footer .grupo2 a{
+footer .grupo2 .sour-box a{
     color: #B6C2DC;
+    text-decoration: none;
+
 }
+
 footer .grupo2 :link {
     display: flex;
     margin: auto;
