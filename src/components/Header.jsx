@@ -15,25 +15,6 @@ function Header() {
                     <Link to="/">
                         <img src="/img/logo.png" />
                     </Link>
-                    <div className="n-r">
-                        <div className="nav-respon" onClick={toggleMenu}>
-                            <i className="fa-solid fa-ellipsis-vertical" style={{
-                                color: '#fff',
-                            }}></i>
-                        </div>
-                        {menuOpen && (
-                            <div className="menu-respon">
-                                <ul className="nav-list">
-                                    <Link to="/About">
-                                        Acerca de mi
-                                    </Link>
-                                    <Link to="/Ubication">
-                                        Turno
-                                    </Link>
-                                </ul>
-                            </div>
-                        )}
-                    </div>
                 </div>
                 {/* nav */}
                 <nav>
@@ -47,6 +28,25 @@ function Header() {
                     </ul>
                 </nav>
                 {/* respon */}
+                <div className="n-r">
+                    <div className="nav-respon" onClick={toggleMenu}>
+                        <i className="fa-solid fa-ellipsis-vertical" style={{
+                            color: '#fff',
+                        }}></i>
+                    </div>
+                    {menuOpen && (
+                        <div className="menu-respon">
+                            <ul className="nav-list">
+                                <Link to="/About">
+                                    Acerca de mi
+                                </Link>
+                                <Link to="/Ubication">
+                                    Turno
+                                </Link>
+                            </ul>
+                        </div>
+                    )}
+                </div>
 
             </header>
         </>
