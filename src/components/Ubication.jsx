@@ -1,6 +1,6 @@
 import react from "react";
 import "./Comp.scss";
-import { Form } from "./form";
+import { Form } from "./Form";
 function Ubication() {
     return (
         <>
