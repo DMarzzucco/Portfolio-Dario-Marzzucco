@@ -18,7 +18,8 @@
         display: grid;
         grid-template-columns: repeat(2, 10fr);
         grid-gap: 10px;
-        background-color: #202124;
+        background-color: transparent;
+        border: 1px solid gray;
         padding: 10px 10px;
         border-radius: 20px;
 
@@ -68,7 +69,7 @@
         align-items: end;
         color: #202124;
         margin-right: 400px;
-        background-color: #ffffffaf;
+        background-color: #ffffff79;
 
         span {
             margin: 0;
@@ -95,7 +96,7 @@
             align-items: center;
             margin-top: 70px;
             padding: 20px 20px;
-            background-color: #202124;
+            background-color: transparent;
             border-radius: 20px;
 
             input {
@@ -188,7 +189,7 @@
                     border: 1px solid #606264;
                     border-radius: 16px;
                     background: #202124;
-                    color: #606264;
+                    color: #abb6c0;
                     font-size: 14px;
                     cursor: pointer;
                 }
@@ -197,7 +198,7 @@
             .tab-cont {
                 width: 100%;
                 color: white;
-                background: #202124;
+                background-color: #131922;
                 border-radius: 20px;
                 padding: 9px 9px;
             }
@@ -254,7 +255,7 @@
                 }
 
                 .tabls {
-                    border-bottom: 1px solid white;
+                    padding: 3px;
 
                     .fot {
                         display: none;
@@ -262,14 +263,24 @@
 
                     button {
                         height: 40px;
+                        display: flex;
+                        align-items: center;
                         border: none;
-                        background: transparent;
+                        background: rgba(255, 255, 255, 0.349);
+                        color:white;
+                        border-radius: 9px;
+                        // border-left: 1px solid grey;
+                        // border-right: 1px solid grey;
+                        margin: 3px 3px;
+                        padding: 3px;
                     }
                 }
 
                 .tab-cont {
                     padding: 0 0;
                     border-radius: 0;
+                    border-top: 1px solid #606264;
+                    border-bottom: 1px solid #606264;
                 }
             }
         }
@@ -284,6 +295,7 @@
             display: flex;
             flex-direction: column;
             border-radius: 0;
+            border: none;
         }
     }
 }

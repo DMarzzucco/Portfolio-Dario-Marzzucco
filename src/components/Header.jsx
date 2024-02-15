@@ -11,42 +11,47 @@ function Header() {
     return (
         <>
             <header>
-                <div className="logo">
-                    <Link to="/">
-                        <img src="/img/logo.png" />
-                    </Link>
-                </div>
-                {/* nav */}
-                <nav>
-                    <ul className="nav-list">
-                        <Link to="/About">
-                            Acerca de mi
+                <div className="grp">
+                    <div className="logo">
+                        <Link to="/">
+                            <img src="/img/logo.png" />
                         </Link>
-                        <Link to="/Ubication">
-                            Turno
-                        </Link>
-                    </ul>
-                </nav>
-                {/* respon */}
-                <div className="n-r">
-                    <div className="nav-respon" onClick={toggleMenu}>
-                        <i className="fa-solid fa-ellipsis-vertical" style={{
-                            color: '#fff',
-                        }}></i>
                     </div>
-                    {menuOpen && (
-                        <div className="menu-respon">
-                            <ul className="nav-list">
-                                <Link to="/About">
-                                    Acerca de mi
-                                </Link>
-                                <Link to="/Ubication">
-                                    Turno
-                                </Link>
-                            </ul>
+                    {/* nav */}
+                    <nav>
+                        <ul className="nav-list">
+                            <Link to="/About">
+                                Acerca de mi
+                            </Link>
+                            <Link to="/Ubication">
+                                Turno
+                            </Link>
+                        </ul>
+                    </nav>
+                    {/* respon */}
+                    <div className="n-r">
+                        <div className="nav-respon" onClick={toggleMenu}>
+                            <i className="fa-solid fa-ellipsis-vertical" style={{
+                                color: '#fff',
+                            }}></i>
                         </div>
-                    )}
+
+                    </div>
                 </div>
+                {/*  */}
+                {menuOpen && (
+                    <div className="menu-respon">
+                        <ul className="nav-list">
+                            <Link to="/About">
+                                Acerca de mi
+                            </Link>
+                            <Link to="/Ubication">
+                                Turno
+                            </Link>
+                        </ul>
+                    </div>
+                )}
+
 
             </header>
         </>

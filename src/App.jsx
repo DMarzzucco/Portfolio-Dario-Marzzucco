@@ -23,7 +23,7 @@ function App() {
         </main>} />
         {/* about */}
         <Route path="/About" element={<main style={{
-          background: '#21252c'
+          background: 'linear-gradient(#032a63, #131922,#1B2024,#1B2024)'
         }}>
           <ScrollTop />
           <Header />
@@ -34,7 +34,7 @@ function App() {
         {/* Ubication */}
         <Route path="/Ubication" element={
           <main style={{
-            background: '#21252c',
+            background: 'linear-gradient(#2222cc, #131922,#1B2024,#1B2024)'
           }}>
             <ScrollTop />
             <Header />
