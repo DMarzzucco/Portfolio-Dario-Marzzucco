@@ -1,26 +1,16 @@
 import react from "react";
 import { Link } from "react-router-dom";
 import "./Comp.scss";
+import { Form } from "./form";
 function Ubication() {
     return (
         <>
-            {/* form */}
             < section className="contacto" >
                 <div className="kopf">
                     <span>En el caso que quieras hacer una consulta</span>
                     <h2> Contáctame</h2>
                 </div>
-                <div className="cont-for">
-                    <div className="filas">
-                        {/* <form action=""></form> */}
-                        <input type="text" name="nombre" placeholder="Nombre & Apellido" />
-                        <input type="text" name="telefono" placeholder=" Teléfono" />
-                        <input type="text" name="mail" placeholder="Correo Electronico (opcional)" />
-                        <input type="text" name="contexto" placeholder="Contexto" />
-                        <textarea name="mensaje" id="" cols="30" rows="10" placeholder="Mensaje" />
-                    </div>
-
-                </div>
+                <Form />
             </section >
         </>
     )
