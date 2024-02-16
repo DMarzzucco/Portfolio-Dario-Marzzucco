@@ -138,6 +138,7 @@ footer .grupo2 :link {
         justify-content: center;
         align-items: center;
         background-color: #111417;
+        padding: 5px;
     }
 
 }
