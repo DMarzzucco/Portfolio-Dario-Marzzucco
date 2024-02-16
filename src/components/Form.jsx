@@ -29,7 +29,7 @@ export function Form() {
         <div className="cont-for">
             <form ref={reForm} onSubmit={sendEmail} className='forme'>
                 <input type="text" name="name" placeholder="Nombre & Apellido" required />
-                <input type="text" name="phone" placeholder=" Teléfono" pattern="[0-9]*" required />
+                <input type="text" name="phone" placeholder=" Teléfono" pattern="[0-9]*" title="Por favor, ingrese solo números en el campo de teléfono" required />
                 <input type="text" name="mail" placeholder="Correo Electronico (opcional)" />
                 <input type="text" name="context" placeholder="Contexto" required />
                 <textarea name="message" id="" cols="30" rows="10" placeholder="Mensaje" required />
