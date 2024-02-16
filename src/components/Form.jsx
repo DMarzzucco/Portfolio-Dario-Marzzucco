@@ -28,11 +28,11 @@ export function Form() {
     return (
         <div className="cont-for">
             <form ref={reForm} onSubmit={sendEmail} className='forme'>
-                <input type="text" name="name" placeholder="Nombre & Apellido" />
-                <input type="text" name="phone" placeholder=" Teléfono" />
+                <input type="text" name="name" placeholder="Nombre & Apellido" required />
+                <input type="text" name="phone" placeholder=" Teléfono" required />
                 <input type="text" name="mail" placeholder="Correo Electronico (opcional)" />
-                <input type="text" name="context" placeholder="Contexto" />
-                <textarea name="message" id="" cols="30" rows="10" placeholder="Mensaje" />
+                <input type="text" name="context" placeholder="Contexto" required />
+                <textarea name="message" id="" cols="30" rows="10" placeholder="Mensaje" required />
                 <input type="submit" value="Enviar" className='btSend' />
             </form>
             {sending && <Loader />}
