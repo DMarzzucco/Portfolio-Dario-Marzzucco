@@ -13,8 +13,8 @@ export function Form() {
     const sendEmail = async (event) => {
         event.preventDefault();
         setSending(true);
-        const serviceId = "service_xhmxkjl";
-        const templateId = "template_7yi1umj";
+        const serviceId = "service_a1b3thb";
+        const templateId = "template_t2szbn8";
         const key = "iT8BqbWUbZqyQKCa9";
         try {
             await emailjs.sendForm(serviceId, templateId, reForm.current, key);
