@@ -8,5 +8,5 @@
 
 <h3 align= "left">My Web Site:</h3>
 <p align="left">
-<a href="https://systemarzz.netlify.app/" target="blank"><img align="center" src="img/Nav.png" heigth="40" width="40"/></a>
+<a href="https://systemarzz.netlify.app/" target="blank"><img align="center" src="https://drive.google.com/file/d/1HRwxkZNL0VHYIsJQMcGke4PJXlZVM_HD/view?usp=drive_link" heigth="40" width="40"/></a>
 </p>
