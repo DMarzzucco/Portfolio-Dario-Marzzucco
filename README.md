@@ -1,4 +1,4 @@
-<img align="center" src="img/logo1.png">
+<img align="center" src="https://drive.google.com/file/d/11A8ZQ-8Mig-15JV_dstcHPIhbykTSmmN/view?usp=drive_link">
 <h3 align="center">Programmer||Web Developer||Graphic Designe</h3>
 
 <h3 align="left">Connect with me:</h3>
