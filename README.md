@@ -1,5 +1,12 @@
-# Piscoterapia-Individual
+<img align="center" src="img/logo1.png">
+<h3 align="center">Programmer||Web Developer||Graphic Designe</h3>
 
-This page is made by Systemarzz
+<h3 align="left">Connect with me:</h3>
+<p align="left">
+<a href="https://linkedin.com/in/dario marzzucco" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="dario marzzucco" height="30" width="40" /></a>
+</p>
 
-(https://systemarzz.netlify.app/)
+<h3 align= "left">My Web Site:</h3>
+<p align="left">
+<a href="https://systemarzz.netlify.app/" target="blank"><img align="center" src="img/Nav.png" heigth="40" width="40"/></a>
+</p>
