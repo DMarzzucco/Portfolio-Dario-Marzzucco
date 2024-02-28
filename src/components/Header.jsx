@@ -8,7 +8,9 @@ function Header() {
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     };
-    const close = () => {setMenuOpem(false)};
+     const closeMenu = () => {
+        setMenuOpen(false);
+    }
     return (
         <>
             <header>
@@ -42,11 +44,11 @@ function Header() {
                 {/*  */}
                 {menuOpen && (
                     <div className="menu-respon">
-                        <ul className="nav-list">
-                            <Link to="/About" onCLick={close}>
+                        <ul className="nav-list" onClick={closeMenu}>
+                            <Link to="/About">
                                 Acerca de mi
                             </Link>
-                            <Link to="/Ubication" onCLick={close}>
+                            <Link to="/Ubication">
                                 Turno
                             </Link>
                         </ul>
