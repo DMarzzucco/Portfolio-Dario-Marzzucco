@@ -1,41 +1,28 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { TogAside } from "./Common";
-import {  faAddressCard, faCode, faPhone } from "@fortawesome/free-solid-svg-icons";
-import { faDiagramProject } from "@fortawesome/free-solid-svg-icons/faDiagramProject";
-import { HomeImage, NavImage } from "@/assets";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import { HomeImage, NavImage, faBars, faXmark } from "@/assets";
+import Coms from "./Common";
+import { useAuth } from "@/context/auth.context";
+
+
+const In = new Coms()
 function Header() {
-    const [isDeplegad, setIsDesplegad] = useState(false);
-    const menuRef = useRef(null);
+    const { openMenu, closeMenu, OutClick, Ref, state } = useAuth()
+    useEffect(() => { OutClick() }, [])
 
-    // useEffect(() => {
-    //     const clickOutside = (e) => {
-    //         if (menuRef.current && !menuRef.current.contains(e.target)) {
-    //             setIsDesplegad(false);
-    //         }
-    //     };
-    //     document.addEventListener('mousedown', clickOutside);
-    //     return () => {
-    //         document.removeEventListener('mousedown', clickOutside);
-    //     };
-
-
-    // }, []);
-
-    const desplegarMenu = () => { setIsDesplegad(!isDeplegad); }
-    const close = () => { setIsDesplegad(false); }
     return (
         <header>
             <div className="flex flex-row items-center" >
-                <button onClick={desplegarMenu} className="
+                <button onClick={openMenu} className="
                  text-white font-bold py-2 
                  px-4 rounded"
                 >
-                    <i className="fa-solid fa-bars"></i>
+                    <FontAwesomeIcon icon={faBars} />
                 </button>
                 <div className="p-1">
                     <Link href={"/"} onClick={close}>
@@ -44,25 +31,22 @@ function Header() {
                 </div>
             </div>
             {/*  */}
-            {isDeplegad ?
+            {state ?
                 <aside className="flex flex-col z-10 absolute 
-                w-60 h-full  bg-blackGray " ref={menuRef}
+                w-60 h-full  bg-blackGray " ref={Ref}
                 >
                     <div className="flex w-full justify-end items-center my-4
                     border-b border-Gr">
                         <div className="flex justify-center items-center w-full ">
                             <Image src={HomeImage} alt="" className="w-40" />
                         </div>
-                        <button className="p-2 hover:bg-shrefne-200 hover:text-blackGray" onClick={close}>
-                            <i className="fa-solid fa-xmark"></i>
+                        <button className="p-2 hover:bg-shrefne-200 hover:text-blackGray" onClick={closeMenu}>
+                            <FontAwesomeIcon icon={faXmark} />
                         </button>
                     </div>
                     <div className="w-full h-60 flex flex-col
                      justify-center items-center p-2 border-b border-Gr" onClick={close}>
-                        <TogAside ico={faAddressCard} src="/About" name="About" />
-                        <TogAside ico={faDiagramProject} src="/Project" name="Project" />
-                        <TogAside ico={faCode} src='/Tc' name='Technology' />
-                        <TogAside ico={faPhone} src='/Contact' name='Contact' />
+                        <In.TogAside />
                     </div>
                     <div className="p-2 text-Gr">
                         <p className="footer:text-10">
@@ -73,8 +57,7 @@ function Header() {
                             All rights reserved Made by Dario Marzzucco
                         </p>
                     </div>
-                </aside>
-                : null
+                </aside> : null
             }
         </header>
     )
