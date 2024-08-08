@@ -2,19 +2,18 @@
 
 import Link from "next/link";
 import Image from "next/image";
-
 import { Logo1Image } from "@/assets";
 import Coms from "./Common";
 import { useAuth } from "@/context/auth.context";
 
-const In = new Coms()
 export default function Footer() {
+    const In = new Coms()
     const { state } = useAuth()
     return (
         <>
             {state ? null :
                 <footer className="w-full  flex flex-col justify-center
-        items-center">
+        items-center bg-blackGray">
                     <div className="grid grid-cols-2 my-3 justify-center items-center
             footer:flex footer:flex-col">
                         <Image src={Logo1Image} alt="" className="w-56 m-1" />
