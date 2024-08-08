@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,35 +11,38 @@ import { useAuth } from "@/context/auth.context";
 
 const In = new Coms()
 function Header() {
-    const { openMenu, closeMenu, OutClick, Ref, state } = useAuth()
-    useEffect(() => { OutClick() }, [])
+    const { state, action } = useAuth()
 
     return (
         <header >
-            {state ? null :
-                <div className="flex flex-row items-center" >
-                    <button onClick={openMenu} className="
-                 text-white font-bold py-2 
-                 px-4 rounded"
+            <div className="flex flex-row items-center" >
+                {!state ?
+                    <button
+                        onClick={() => { action({ type: "open" }) }}
+                        className=" text-white font-bold py-2   px-4 rounded"
                     >
                         <FontAwesomeIcon icon={faBars} />
                     </button>
-
-                    <div className="p-1">
-                        <Link href={"/"} className="flex justify-center items-center">
+                    :
+                    <button
+                        onClick={() => { action({ type: "close" }) }}
+                        className="  p-2 hover:bg-shrefne-200 hover:text-blackGray"
+                    >
+                        <FontAwesomeIcon icon={faXmark} />
+                    </button>
+                }
+                <div className="p-1">
+                    <Link href={"/"} className="flex justify-center items-center">
+                        {!state ?
                             <Image src={NavImage} className="w-9 h-10" alt="Nav Image" />
-                        </Link>
-                    </div>
+                            :
+                            <Image src={Logo1Image} alt="" className="w-40" />
+                        }
+                    </Link>
                 </div>
-            }
+            </div>
             {state ?
-                <aside className="flex flex-col z-10 absolute w-60 h-full  bg-blackGray " ref={Ref}>
-                    <div className="flex justify-between items-center w-full p-2 ">
-                        <Image src={Logo1Image} alt="" className="w-40" />
-                        <button className="  p-2 hover:bg-shrefne-200 hover:text-blackGray" onClick={closeMenu}>
-                            <FontAwesomeIcon icon={faXmark} />
-                        </button>
-                    </div>
+                <aside className="flex flex-col z-10 absolute w-60 h-full  bg-blackGray " >
                     <div className="w-full h-60 flex flex-col
                      justify-center items-center p-2 border-y border-Gr" onClick={close}>
                         <In.TogAside />

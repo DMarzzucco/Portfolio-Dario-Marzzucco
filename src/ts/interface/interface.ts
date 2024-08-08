@@ -1,4 +1,5 @@
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+import { act } from "../types/types";
 
 export interface TogsProp {
     src: string;
@@ -35,4 +36,16 @@ export interface ElementPr {
 }
 export interface Htmlprop {
     title: string
+}
+export interface actionsProps {
+    menuNav: boolean;
+    skills: boolean;
+    habbs: boolean
+}
+
+export interface AuthProp { children: React.ReactNode }
+
+export interface useContProp {
+    state: boolean;
+    action: (op: act) => void;
 }
