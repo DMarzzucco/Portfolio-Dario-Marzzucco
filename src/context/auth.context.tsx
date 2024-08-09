@@ -16,14 +16,37 @@ export const useAuth = () => {
 
 const AuthProvider: React.FC<AuthProp> = ({ children }) => {
     const [state, setState] = React.useState<boolean>(false)
+    const [skills, setSkills] = React.useState<boolean>(false)
+    const [habs, setHabs] = React.useState<boolean>(false)
+
+    const [about, setAbout] = React.useState<boolean>(false)
+
 
     const action = (op: act) => {
         switch (op.type) {
-            case "open":
+            case "open_nav":
                 setState(true);
                 break;
-            case "close":
+            case "close_nav":
                 setState(false)
+                break;
+            case "skills_op":
+                setSkills(true);
+                setHabs(false);
+                break;
+            case "out_skills":
+                setSkills(false)
+                break;
+            case "habs_op":
+                setHabs(true)
+                setSkills(false)
+                break;
+            case "out_habs":
+                setHabs(false)
+                break;
+            // 
+            case "about":
+                setAbout(!about)
                 break;
             default:
                 throw new Error
@@ -31,7 +54,7 @@ const AuthProvider: React.FC<AuthProp> = ({ children }) => {
         }
     }
     return (
-        <AuthContext.Provider value={{ state, action }}>
+        <AuthContext.Provider value={{ state, action, skills, habs,about }}>
             {children}
         </AuthContext.Provider>
     )

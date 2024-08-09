@@ -48,6 +48,7 @@ const config: Config = {
         'doshMed': '240px',
         'dosh': '200px',
         '100': '100px',
+        '90': '90px',
       },
       height: {
         'All': '100vh',

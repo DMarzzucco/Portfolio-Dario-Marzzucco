@@ -8,5 +8,15 @@ export type RedActions =
 
 
 export type act =
-    | { type: "open" }
-    | { type: "close" }
+    // Nav
+    | { type: "open_nav" }
+    | { type: "close_nav" }
+    // skills_windows
+    | { type: "skills_op" }
+    | { type: "out_skills" }
+    // habs_windows
+    | { type: "habs_op" }
+    | { type: "out_habs" }
+    // about
+    |{type:"about"}
+

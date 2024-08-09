@@ -1,9 +1,18 @@
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { act } from "../types/types";
 
+export interface template_props {
+    title: string;
+    click: () => void;
+    children: React.ReactNode
+}
 export interface TogsProp {
     src: string;
     name?: string;
+    icon: IconDefinition
+}
+export interface ButtonHeaderProps {
+    click: () => void;
     icon: IconDefinition
 }
 
@@ -47,5 +56,9 @@ export interface AuthProp { children: React.ReactNode }
 
 export interface useContProp {
     state: boolean;
+    skills: boolean;
+    habs: boolean
+    about:boolean
+
     action: (op: act) => void;
 }

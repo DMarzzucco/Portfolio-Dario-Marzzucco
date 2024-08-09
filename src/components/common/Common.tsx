@@ -1,15 +1,17 @@
+"use client";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
 import { logo2Image, NavImage, profileImage } from "@/assets";
 import { ElementPr, Htmlprop, ImpProp, Liprop, ListMenuProp } from "@/ts/interface/interface";
-import DateTransfers from "../libs/Data.Transfers";
+import { useAuth } from "@/context/auth.context";
+import About from "@/app/about/page";
 
-const Dt = new DateTransfers()
 export default class Coms {
 
     HomeCart = ({ }) => {
+        const { action, about } = useAuth()
         return (
             <div className="w-auhref home-cart flex flex-col
              justify-center items-center">
@@ -18,12 +20,16 @@ export default class Coms {
                     {/*  */}
                     <Image src={NavImage} alt=""
                         className="w-60 home:w-20 my-3" />
-                    <Image src={logo2Image} alt=""
+                    <Image
+                        src={logo2Image}
+                        alt=""
                         className="w-96 home:w-60" />
                     {/*  */}
                 </div>
                 {/*  */}
-                <Link href={"https://www.linkedin.com/in/dario-marzzucco-597090283/"}
+                <button
+                    // href={"/about"}
+                    onClick={() => { action({ type: "about" }) }}
                     className="flex flex-row justify-center
                  items-center bg-blackGray p-1 rounded-40 mini3:flex-col mini3:rounded-20">
                     {/*  */}
@@ -31,56 +37,21 @@ export default class Coms {
                     {/*  */}
                     <div className="flex flex-col items-start justify-center mx-3 mini3:items-center mini3:text-center ">
                         <h1 className="font-jet text-25 mini3:text-20 ">Dario Marzzucco</h1>
-                        <span className="text-15 font-jet w-tre mini3:w-doshMed text-Gr">
-                            Programmer,Web Developer,Graphic Designer
-                        </span>
+                        <div className="text-15 font-jet w-tre mini3:w-doshMed text-Gr">
+                            {!about ?
+                                <p>Programmer,Web Developer,Graphic Designer</p>
+                                :
+                                <p className="text-xs font-light text-start">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, illo recusandae reiciendis quod sint eligendi minima harum, sed nobis laudantium labore quae soluta ad voluptas! Praesentium quasi iure quia quas?
+                                </p>
+                            }
+                        </div>
                     </div>
-                </Link>
+                </button>
+                <About/>
             </div>
         )
     }
-    // 
-    TogAside: React.FC = () => {
-        return (
-            <>
-                {Dt.tagsNv.map((pre, index) => (
-                    <div key={index} className=" w-full h-full flex flex-row justify-center items-center hover:bg-sta hover:text-blackGray">
-                        <Link href={pre.src} className=" w-full h-full flex items-center justify-between p-1">
-                            <FontAwesomeIcon icon={pre.icon} />
-                            <p>{pre.name}</p>
-                        </Link>
-                    </div>
-                ))}
-            </>
-        )
-    }
-    FooterInf: React.FC = () => {
-        return (
-            <>
-                {Dt.InFoot.map((pres, index) => (
-                    <div key={index} className="flex m-1">
-                        <span className="mx-2">
-                            <FontAwesomeIcon icon={pres.icon} />
-                        </span>
-                        <p>{pres.inf}</p>
-                    </div>
-                ))}
-            </>
-        )
-    }
-    // 
-    FooterEn: React.FC = () => {
-        return (
-            <>
-                {Dt.RedSocials.map((pre, index) => (
-                    <Link key={index} className="m-2" href={pre.src}>
-                        <FontAwesomeIcon icon={pre.icon} />
-                    </Link>
-                ))}
-            </>
-        )
-    }
-
     //
     InpForm: React.FC<ImpProp> = ({ type, name, placeholder, pattern, title }) => {
         return (
@@ -93,7 +64,6 @@ export default class Coms {
                 required
                 className="w-full p-2 m-2 border rounded-lg border-Gr bg-blackGray"
             />
-
         )
     }
     // 

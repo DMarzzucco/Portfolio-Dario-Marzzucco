@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Logo1Image } from "@/assets";
-import Coms from "./Common";
+import Coms from "./coms";
 import { useAuth } from "@/context/auth.context";
 
 export default function Footer() {
