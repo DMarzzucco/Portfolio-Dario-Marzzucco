@@ -8,7 +8,7 @@ export default class Coms {
         return (
             <>
                 {Dt.InFoot.map((pres, index) => (
-                    <div key={index} className="flex m-1">
+                    <div key={index} className="flex m-1 text-xs">
                         <span className="mx-2">
                             <FontAwesomeIcon icon={pres.icon} />
                         </span>

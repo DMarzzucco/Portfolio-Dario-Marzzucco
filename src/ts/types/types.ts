@@ -19,4 +19,5 @@ export type act =
     | { type: "out_habs" }
     // about
     |{type:"about"}
+    |{type:"project"}
 

@@ -1,6 +1,7 @@
 "use client";
 
 import { act, AuthProp, useContProp } from "@/ts";
+// import { useRouter } from "next/router";
 import React from "react";
 
 export const AuthContext = React.createContext<useContProp | undefined>(undefined)
@@ -15,12 +16,14 @@ export const useAuth = () => {
 }
 
 const AuthProvider: React.FC<AuthProp> = ({ children }) => {
+
     const [state, setState] = React.useState<boolean>(false)
     const [skills, setSkills] = React.useState<boolean>(false)
     const [habs, setHabs] = React.useState<boolean>(false)
 
     const [about, setAbout] = React.useState<boolean>(false)
 
+    // const router = useRouter()
 
     const action = (op: act) => {
         switch (op.type) {
@@ -47,6 +50,14 @@ const AuthProvider: React.FC<AuthProp> = ({ children }) => {
             // 
             case "about":
                 setAbout(!about)
+                setSkills(false)
+                setHabs(false)
+                break;
+            case "project":
+                // router.push('/project')
+                setAbout(false)
+                setSkills(false)
+                setHabs(false)
                 break;
             default:
                 throw new Error
@@ -54,7 +65,7 @@ const AuthProvider: React.FC<AuthProp> = ({ children }) => {
         }
     }
     return (
-        <AuthContext.Provider value={{ state, action, skills, habs,about }}>
+        <AuthContext.Provider value={{ state, action, skills, habs, about }}>
             {children}
         </AuthContext.Provider>
     )

@@ -1,12 +1,11 @@
 "use client";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import Link from "next/link";
 import Image from "next/image";
 import React from "react";
 import { logo2Image, NavImage, profileImage } from "@/assets";
-import { ElementPr, Htmlprop, ImpProp, Liprop, ListMenuProp } from "@/ts/interface/interface";
-import { useAuth } from "@/context/auth.context";
-import About from "@/app/about/page";
+import { ElementPr, Htmlprop, ImpProp, Liprop, ListMenuProp } from "@/ts";
+import { useAuth } from "@/context";
+import About from "@/components/about/comps";
 
 export default class Coms {
 
@@ -28,27 +27,26 @@ export default class Coms {
                 </div>
                 {/*  */}
                 <button
-                    // href={"/about"}
                     onClick={() => { action({ type: "about" }) }}
                     className="flex flex-row justify-center
-                 items-center bg-blackGray p-1 rounded-40 mini3:flex-col mini3:rounded-20">
+                 items-center bg-blackGray p-1 rounded-2xl mini3:flex-col mini3:rounded-20">
                     {/*  */}
                     <Image src={profileImage} alt="" className="w-20 rounded-full" />
                     {/*  */}
                     <div className="flex flex-col items-start justify-center mx-3 mini3:items-center mini3:text-center ">
-                        <h1 className="font-jet text-25 mini3:text-20 ">Dario Marzzucco</h1>
-                        <div className="text-15 font-jet w-tre mini3:w-doshMed text-Gr">
+                        <h1 className="font-bold text-xl mini3:text-20 ">Dario Marzzucco</h1>
+                        <div className="text-15 font-jet w-tre mini3:w-doshMed text-Gr text-xs font-light text-start">
                             {!about ?
-                                <p>Programmer,Web Developer,Graphic Designer</p>
+                                <p>FullStack Developer</p>
                                 :
-                                <p className="text-xs font-light text-start">
+                                <p>
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, illo recusandae reiciendis quod sint eligendi minima harum, sed nobis laudantium labore quae soluta ad voluptas! Praesentium quasi iure quia quas?
                                 </p>
                             }
                         </div>
                     </div>
                 </button>
-                <About/>
+                <About />
             </div>
         )
     }
