@@ -8,6 +8,10 @@ export default function Home() {
       <section className=" flex flex-col justify-center items-center h-screen w-full">
         <In.HomeCart />
       </section>
+      <section className="flex flex-col justify-center items-center h-screen">
+        <In.habs_windows />
+        <In.skills_windows />
+      </section>
     </main>
   );
 }

@@ -17,7 +17,10 @@ export const useAuth = () => {
 
 const AuthProvider: React.FC<AuthProp> = ({ children }) => {
 
+    const [section, setSection] = React.useState<number | null>(null)
+
     const [state, setState] = React.useState<boolean>(false)
+
     const [skills, setSkills] = React.useState<boolean>(false)
     const [habs, setHabs] = React.useState<boolean>(false)
 
@@ -25,6 +28,9 @@ const AuthProvider: React.FC<AuthProp> = ({ children }) => {
 
     // const router = useRouter()
 
+    const handleSubmit = (index: number) => {
+        setSection(pre => (pre === index ? null : index))
+    }
     const action = (op: act) => {
         switch (op.type) {
             case "open_nav":
@@ -33,6 +39,7 @@ const AuthProvider: React.FC<AuthProp> = ({ children }) => {
             case "close_nav":
                 setState(false)
                 break;
+
             case "skills_op":
                 setSkills(true);
                 setHabs(false);
@@ -40,6 +47,7 @@ const AuthProvider: React.FC<AuthProp> = ({ children }) => {
             case "out_skills":
                 setSkills(false)
                 break;
+
             case "habs_op":
                 setHabs(true)
                 setSkills(false)
@@ -47,6 +55,7 @@ const AuthProvider: React.FC<AuthProp> = ({ children }) => {
             case "out_habs":
                 setHabs(false)
                 break;
+
             // 
             case "about":
                 setAbout(!about)
@@ -65,7 +74,7 @@ const AuthProvider: React.FC<AuthProp> = ({ children }) => {
         }
     }
     return (
-        <AuthContext.Provider value={{ state, action, skills, habs, about }}>
+        <AuthContext.Provider value={{ state, action, skills, habs, about, handleSubmit, section }}>
             {children}
         </AuthContext.Provider>
     )

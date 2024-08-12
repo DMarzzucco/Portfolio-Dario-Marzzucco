@@ -1,9 +1,20 @@
+import React from "react";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { act } from "../types/types";
+import { StaticImageData } from "next/image";
+
+export interface dates_habs {
+    title: string;
+    context: string;
+}
+export interface dates_fullstak {
+    title: string;
+    [key: string]: dates_habs[] | string;
+}
 
 export interface template_props {
     title: string;
-    click: () => void;
+    img: string | StaticImageData;
     children: React.ReactNode
 }
 export interface TogsProp {
@@ -21,31 +32,6 @@ export interface Infpr {
     inf: string
 
 }
-export interface ImpProp {
-    type: React.HTMLInputTypeAttribute | undefined;
-    name: string;
-    placeholder: string;
-    pattern: string;
-    title: string
-}
-export interface ListMenuProp {
-    ico: IconDefinition;
-    name: string;
-    color: number;
-    href: string
-}
-export interface Liprop {
-    title: string;
-    cont: string;
-    icon: IconDefinition;
-    color: number;
-}
-export interface ElementPr {
-    et: string
-}
-export interface Htmlprop {
-    title: string
-}
 export interface actionsProps {
     menuNav: boolean;
     skills: boolean;
@@ -58,7 +44,9 @@ export interface useContProp {
     state: boolean;
     skills: boolean;
     habs: boolean
-    about:boolean
+    about: boolean
 
+    section: number | null;
+    handleSubmit: (index: number) => void
     action: (op: act) => void;
 }

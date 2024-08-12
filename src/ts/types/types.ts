@@ -17,7 +17,8 @@ export type act =
     // habs_windows
     | { type: "habs_op" }
     | { type: "out_habs" }
+
     // about
-    |{type:"about"}
-    |{type:"project"}
+    | { type: "about" }
+    | { type: "project" }
 

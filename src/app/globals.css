@@ -107,7 +107,8 @@ button {
 }
 
 button:hover {
-  border-color: #ec7d33;
+  background-color: #333fec;
+  color: rgb(221, 224, 226);
 }
 
 button:focus,

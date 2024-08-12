@@ -1,15 +1,82 @@
 "use client";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Image from "next/image";
 import React from "react";
-import { logo2Image, NavImage, profileImage } from "@/assets";
-import { ElementPr, Htmlprop, ImpProp, Liprop, ListMenuProp } from "@/ts";
+import { logo2Image, NavImage, profileImage, SoftSkills, DevSkills } from "@/assets";
+import { template_props } from "@/ts";
 import { useAuth } from "@/context";
 import About from "@/components/about/comps";
+import Dates from "../about/libs/dates/dates";
+
+const It = new Dates();
 
 export default class Coms {
 
-    HomeCart = ({ }) => {
+    template_windows: React.FC<template_props> = ({ children, title, img }) => {
+        return (
+            <section className="flex flex-row justify-center items-center w-full bg-slate-300 text-slate-800 my-2">
+                <div className="flex flex-row justify-center items-center w-full text-slate-500 border-r border-slate-400 h-full p-2 ">
+                    <h1 className="text-2xl font-Ligth text-start mx-1">
+                        {title}
+                    </h1>
+                    <Image src={img} alt="" width={160} />
+                </div>
+                <div className="flex flex-col  items-start w-full h-doshs h-auto overflow-y-scroll p-2">
+                    {children}
+                </div>
+            </section>
+        )
+    }
+    habs_windows: React.FC = () => {
+        return (
+            <this.template_windows
+                title="Soft Skills"
+                img={SoftSkills}>
+                <div>
+                    {It.habs.map((pre, index) => (
+                        <div key={index} className="flex flex-col justify-center items-start py-1">
+                            <h2 className="text-blue-600">{pre.title}</h2>
+                            <p className="text-xs font-light">{pre.context}</p>
+                        </div>
+                    ))}
+                </div>
+            </this.template_windows>
+        )
+    }
+    skills_windows: React.FC = () => {
+        const { section, handleSubmit } = useAuth()
+        return (
+            <this.template_windows title="Dev Skills" img={DevSkills}>
+                <div>
+                    {It.fullstak.map((pre, index) => (
+                        <div key={index} className="my-2">
+                            <button
+                                className="m-1 p-2 font-bold text-xl bg-transparent text-slate-500 "
+                                onClick={() => handleSubmit(index)}
+                            >
+                                {pre.title}
+                            </button>
+                            {section === index &&
+                                <>
+                                    {Array.isArray(pre.arr) && pre.arr.map((item, index) => (
+                                        <div key={index} className="px-4">
+                                            <h3 className="font-bold text-blue-500">
+                                                {item.title}
+                                            </h3>
+                                            <p className="font-light text-slate-500 text-xs">
+                                                {item.context}
+                                            </p>
+                                        </div>
+                                    ))}
+                                </>
+                            }
+                        </div>
+                    ))}
+                </div>
+            </this.template_windows>
+        )
+    }
+    // 
+    HomeCart = () => {
         const { action, about } = useAuth()
         return (
             <div className="w-auhref home-cart flex flex-col
@@ -47,72 +114,6 @@ export default class Coms {
                     </div>
                 </button>
                 <About />
-            </div>
-        )
-    }
-    //
-    InpForm: React.FC<ImpProp> = ({ type, name, placeholder, pattern, title }) => {
-        return (
-            <input
-                type={type}
-                name={name}
-                placeholder={placeholder}
-                pattern={pattern}
-                title={title}
-                required
-                className="w-full p-2 m-2 border rounded-lg border-Gr bg-blackGray"
-            />
-        )
-    }
-    // 
-    LiMenu: React.FC<ListMenuProp> = ({ ico, name, href }) => {
-        return (
-            <li className="flex flex-row w-full  p-3 border-b border-blackGray
-            hover:bg-blackGray hover:text-sta cursor-pointer">
-                <a href={href} className="flex flex-row items-center">
-                    {Array.isArray(ico) && ico.map((ico, index, color) => (
-                        <FontAwesomeIcon key={index} icon={ico} style={{ color: color[index], margin: "3px" }} />
-                    ))}
-                    <p className="mx-2">{name}</p>
-                </a>
-            </li>
-        )
-    }
-    // 
-    Lipro: React.FC<Liprop> = ({ title, cont, icon, color }) => {
-
-
-        return (
-            <>
-                <li className="flex flex-row  items-center">
-                    {title}
-                    {Array.isArray(cont) && cont.map((cont, index) => (
-                        <p key={index} style={{ margin: '0px 3px', color: '#969696', fontSize: '15px' }}>
-                            {cont}
-                        </p>
-                    ))}
-                    {Array.isArray(icon) && Array.isArray(color) && icon.map((icon, index) => (
-                        <FontAwesomeIcon key={index} icon={icon}
-                            style={{ color: color[index], margin: "3px" }} />
-                    ))}
-                </li>
-            </>
-        )
-    }
-    Elementk: React.FC<ElementPr> = ({ et }) => {
-        return (
-            <p className="flex flex-row  items-center text-green-500">
-                {et}
-            </p>
-        )
-    }
-    // 
-    HtmLI: React.FC<Htmlprop> = ({ title }) => {
-        return (
-            <div className="flex flex-row hover:bg-black">
-                <this.Elementk et={"<li>"} />
-                <li className="text-blue-400">{title}</li>
-                <this.Elementk et={"</li>"} />
             </div>
         )
     }

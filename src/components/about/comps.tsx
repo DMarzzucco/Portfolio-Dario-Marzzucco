@@ -1,11 +1,9 @@
 "use client";
 import { useAuth } from "@/context/auth.context";
-import Coms from "./libs/libs";
 // import Link from "next/link";
 // import { useRouter } from "next/router";
 
 export default function About() {
-    const It = new Coms()
     const { action, about } = useAuth()
     // const router = useRouter
     // const HadnleButton = () => {
@@ -26,8 +24,8 @@ export default function About() {
                             <button onClick={() => { action({ type: "skills_op" }) }}>Skills</button>
                             <button onClick={() => { action({ type: "habs_op" }) }}>Comunication </button>
                         </div>
-                        <It.habs_windows />
-                        <It.skills_windows />
+                        {/* <It.habs_windows />
+                        <It.skills_windows /> */}
                     </div>
                 </div>
             }
