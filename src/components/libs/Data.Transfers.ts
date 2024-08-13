@@ -15,7 +15,7 @@ export default class DateTransfers {
         },
         {
             icon: faGoogle,
-            src: "drrkermazyxokv@gmail.com"
+            src: "mailto:drrkermazyxokv@gmail.com"
         },
         {
             icon: faLinkedin,

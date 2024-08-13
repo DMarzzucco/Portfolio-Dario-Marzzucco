@@ -1,7 +1,6 @@
 import React from "react";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { act } from "../types/types";
-import { StaticImageData } from "next/image";
 
 export interface dates_habs {
     title: string;
@@ -10,12 +9,6 @@ export interface dates_habs {
 export interface dates_fullstak {
     title: string;
     [key: string]: dates_habs[] | string;
-}
-
-export interface template_props {
-    title: string;
-    img: string | StaticImageData;
-    children: React.ReactNode
 }
 export interface TogsProp {
     src: string;
@@ -45,8 +38,9 @@ export interface useContProp {
     skills: boolean;
     habs: boolean
     about: boolean
+    action: (op: act) => void;
+
 
     section: number | null;
     handleSubmit: (index: number) => void
-    action: (op: act) => void;
 }

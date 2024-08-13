@@ -1,1 +1,1 @@
-export {default as About} from "./comps"
+export * from "./dates"

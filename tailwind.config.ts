@@ -44,6 +44,7 @@ const config: Config = {
         'jet': 'Jetbrains Mono'
       },
       width: {
+        '392': '392px',
         'tre': '300px',
         'doshMed': '240px',
         'dosh': '200px',

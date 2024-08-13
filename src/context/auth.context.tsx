@@ -1,7 +1,6 @@
 "use client";
 
 import { act, AuthProp, useContProp } from "@/ts";
-// import { useRouter } from "next/router";
 import React from "react";
 
 export const AuthContext = React.createContext<useContProp | undefined>(undefined)
@@ -26,7 +25,6 @@ const AuthProvider: React.FC<AuthProp> = ({ children }) => {
 
     const [about, setAbout] = React.useState<boolean>(false)
 
-    // const router = useRouter()
 
     const handleSubmit = (index: number) => {
         setSection(pre => (pre === index ? null : index))
