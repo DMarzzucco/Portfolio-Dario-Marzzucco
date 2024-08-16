@@ -3,44 +3,48 @@ export default class Dates {
 
     fullstak: dates_fullstak[] = [
         {
-            title: "FrontEnd Skills",
-            arr: [
-                {
-                    title: "Web Application Development",
-                    context: "Creation of intuitive and functional user interfaces."
-                },
-                {
-                    title: "Frontend and Backend Integration",
-                    context: "Effective connection with the backend using RESTful APIs or GraphQL, using tools such as Axios or Fetch."
-                },
-                {
-                    title: "State Management",
-                    context: "Management of global application state using tools like useContext or Redux."
-                },
-                {
-                    title: "Optimization and Performance",
-                    context: "Techniques such as code splitting and file rendering to achieve better optimization."
-                },
-            ]
-        },
-        {
             title: "Back End Skills",
             arr: [
                 {
-                    title: "Application Development",
-                    context: "Development of CRUD operations."
+                    title: "Programming Lenguage",
+                    context: "TypeScript/JavaScript with Node.js",
                 },
                 {
-                    title: "Application Integration",
-                    context: "Connecting the client with the server, managing APIs, and communication between layers."
+                    title: "Frameworks",
+                    context: "Express",
+                    context2: "Nest.js",
+                    context3: "GraphQL"
                 },
                 {
-                    title: "Database Management",
-                    context: "Design, implementation, optimization, use of ORMs, schemas, validations, and query management."
+                    title: "Database",
+                    context: "SQL: PostgreSQL",
+                    context2: "NoSQL:MongoDB",
+                    context3: "ORMs: Mongoose and Prisma"
                 },
                 {
-                    title: "Security Implementation",
-                    context: "Integration of middleware for user authentication and authorization to access certain routes or perform specific operations."
+                    title: "CRUD Operations and RESTful APIs",
+                    context: "Designing and implementing CRUD (Create, Read, Update, Delete) operations to build RESTful APIs, ensuring proper endpoint structure, data handling, and adherence to REST principles."
+                },
+                {
+                    title: "Security:",
+                    context: "Authentication and Authorization: JWT",
+                    context2: "Hashing: Using bcrypt to hash and verify passwords.",
+                    context3: "Data Validation: Using Zod to define validation schemes, ensuring that incoming data meets expected",
+                },
+                {
+                    title: "Networking",
+                    context: "Protocols: HTTP, HTTPS.",
+                    context2: "Network models: WebSockets"
+                },
+                {
+                    title: "Documentation",
+                    context: "API Documentation: Postman",
+                    context2: "README.md Files: Creation of README.md files to provide general information about the project, including installation instructions, usage, contribution and any other relevant information for developers and users."
+                },
+                {
+                    title: "Errors and Logs Management",
+                    context: "Errors Handlers: Customized error handling implementation, developing strategies and structures to capture, manage and report errors in the application.",
+                    context2: "Logs Handlers: Creation and implementation of customized solutions for event and error logging, adapted to the specific needs of the project."
                 },
                 {
                     title: "Optimization and Performance",
@@ -49,19 +53,67 @@ export default class Dates {
             ]
         },
         {
+            title: "FrontEnd Skills",
+            arr: [
+                {
+                    title: "Lenguages",
+                    context: "JavaScript/TypeScript",
+                    context2: "HTML",
+                    context3: "CSS",
+                    context4: "SCSS",
+                },
+                {
+                    title: "Frameworks and Libraries",
+                    context: "React",
+                    context2: "NextJS",
+                    context3: "TaillwindCSS"
+                },
+                {
+                    title: "Automatizations and Constructions",
+                    context: "Task Runners: Familiarity with tools such as npm scripts to automate common tasks.",
+                    context2: "Module Blunders: Knowledge of Webpack, Vite or Parcel to package code and its dependencies."
+                },
+                {
+                    title: "Optimization and Performance",
+                    context: "Image Optimization: Use of efficient image formats and techniques such as lazy loading",
+                    context2: "Minification and Compression: Compression of CSS and JS files to improve loading times.",
+                    context3: "Mejoras de Renderizado: Técnicas para evitar problemas de reflow/repaint y optimizar el rendimiento de la página."
+                },
+                {
+                    title: "Webs APIs",
+                    context: "Browser APIs: Knowledge of APIs such as Fetch API, and Axios"
+                },
+                {
+                    title: "UX/UI Design",
+                    context: "UX/UI Principles: Basic knowledge of user-centered design, proper use of typography, colors, and spacing."
+                },
+            ]
+        },
+        {
             title: "Mutual Skills",
             arr: [
+                {
+                    title: "Web Applications Developer",
+                    context: "Content Management Systems (CMS)",
+                    context2: "Software as a Service (SaaS)",
+                    context3: "Websites"
+                },
                 {
                     title: "Code Testing and Quality",
                     context: "Use of testing tools and maintenance of a code structure that is readable, flexible, and scalable."
                 },
                 {
                     title: "Deployment and Maintenance",
-                    context: "Configuration and management of production and development environments, implementation of CI/CD pipelines."
+                    context: "CI/CD:GitHub",
+                    context2: "Containers:Docker",
+                    context3: "Deployment Platforms: Vercel"
                 },
                 {
-                    title: "Software Architecture Design",
-                    context: "Definition of the user interface architecture and its integration with the backend."
+                    title: "Software Architecture",
+                    context: "Monolithic",
+                    context2: "MSA:Microservices Architecture",
+                    context3: "Hybrid Arch",
+                    context4: "C/S (Client-Server)",
                 },
             ]
         }

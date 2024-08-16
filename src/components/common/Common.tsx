@@ -45,24 +45,31 @@ export default class Coms {
                     {It.fullstak.map((pre, index) => (
                         <div key={index} className="my-2 p-2 ">
                             <button
-                                className="m-1 p-2 font-bold text-xl bg-transparent text-slate-500 w-full text-center"
+                                className="m-1 p-2 font-bold text-xl bg-transparent text-slate-500 w-tre text-center"
                                 onClick={() => handleSubmit(index)}
                             >
                                 {pre.title}
                             </button>
                             {section === index && (
-                                <>
+                                <div className="grid grid-cols-3 About:grid-cols-2 sixmit:grid-cols-1 sixmit:overflow-y-scroll sixmit:justify-start sixmit:h-tre justify-center items-center">
                                     {Array.isArray(pre.arr) && pre.arr.map((item, index) => (
-                                        <div key={index} className="flex flex-col justify-center items-start p-4 bg-blackGray ">
+                                        <div key={index} className="flex flex-col justify-center items-start p-4 w-tre h-dosh border border-slate-500 rounded-lg m-2 sixmit:py-2 sixmit:border-none sixmit:border-b sixmit:h-auto">
                                             <h3 className="font-bold text-blue-500">
                                                 {item.title}
                                             </h3>
-                                            <p className="font-light text-slate-500 text-xs">
-                                                {item.context}
-                                            </p>
+                                            <ul className="list-disc p-2">
+                                                {Object.keys(item).map((key) => {
+                                                    if (key.startsWith("context") && typeof item[key] === "string") {
+                                                        return <li key={key} className="font-light text-slate-500 text-xs">
+                                                            {item[key]}
+                                                        </li>
+                                                    }
+                                                    return null
+                                                })}
+                                            </ul>
                                         </div>
                                     ))}
-                                </>
+                                </div>
                             )}
                         </div>
                     ))}

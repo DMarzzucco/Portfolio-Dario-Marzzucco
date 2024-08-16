@@ -6,9 +6,13 @@ export interface dates_habs {
     title: string;
     context: string;
 }
+export interface date_skills{
+    title:string;
+    [key:string]: string |number
+}
 export interface dates_fullstak {
     title: string;
-    [key: string]: dates_habs[] | string;
+    [key: string]: date_skills[] | string;
 }
 export interface TogsProp {
     src: string;

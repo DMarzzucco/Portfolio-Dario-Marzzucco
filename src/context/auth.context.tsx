@@ -5,24 +5,13 @@ import React from "react";
 
 export const AuthContext = React.createContext<useContProp | undefined>(undefined)
 
-export const useAuth = () => {
-    const context = React.useContext(AuthContext)
-    if (!context) {
-        throw new Error('useAuth must be used')
-    }
-    return context;
-
-}
-
 const AuthProvider: React.FC<AuthProp> = ({ children }) => {
 
     const [section, setSection] = React.useState<number | null>(null)
 
     const [state, setState] = React.useState<boolean>(false)
-
     const [skills, setSkills] = React.useState<boolean>(false)
     const [habs, setHabs] = React.useState<boolean>(false)
-
     const [about, setAbout] = React.useState<boolean>(false)
 
 
@@ -78,3 +67,12 @@ const AuthProvider: React.FC<AuthProp> = ({ children }) => {
     )
 }
 export default AuthProvider;
+
+export const useAuth = () => {
+    const context = React.useContext(AuthContext)
+    if (!context) {
+        throw new Error('useAuth must be used')
+    }
+    return context;
+
+}
