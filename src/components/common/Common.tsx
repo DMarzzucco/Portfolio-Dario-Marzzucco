@@ -31,43 +31,53 @@ export default class Coms {
             </div >
         )
     }
+    skill_list: React.FC<{ item: any }> = ({ item }) => {
+        return (
+            <div className="flex flex-col justify-center items-start p-4 w-tre h-dosh border border-slate-500 rounded-lg m-2 sixmit:py-2 sixmit:border-none sixmit:border-b sixmit:h-auto">
+                <h3 className="font-bold text-blue-500">
+                    {item.title}
+                </h3>
+                <ul className="list-disc p-2">
+                    {Object.keys(item).map((key) => {
+                        if (key.startsWith("context") && typeof item[key] === "string") {
+                            return <li key={key} className="font-light text-slate-500 text-xs">
+                                {item[key]}
+                            </li>
+                        }
+                        return null
+                    })}
+                </ul>
+            </div>
+        )
+    }
     skills_windows: React.FC = () => {
         const { section, handleSubmit } = useAuth()
         return (
-            <div className="flex flex-col justify-center items-center ">
+            <div className="flex flex-col justify-center items-center w-full ">
                 <div className="flex flex-col justify-center items-center w-full text-slate-300  h-full p-2 ">
                     <Image src={DevSkills} alt="" width={160} />
                     <h1 className="text-2xl font-Ligth text-start mx-1">
                         Dev Skills
                     </h1>
                 </div>
-                <div className=" flex flex-col justify-center items-center ">
+                <div className=" flex flex-col justify-center items-start w-full ">
                     {It.fullstak.map((pre, index) => (
                         <div key={index} className="my-2 p-2 ">
                             <button
-                                className="m-1 p-2 font-bold text-xl bg-transparent text-slate-500 w-tre text-center"
+                                className="m-1 p-2 font-bold text-xl bg-transparent text-slate-500 w-tre text-center flex flex-col justify-center items-start"
                                 onClick={() => handleSubmit(index)}
                             >
-                                {pre.title}
+                                <h2>{pre.title}</h2>
+                                {section !== index && (
+                                    <span className="text-xs font-light text-start">
+                                        {pre.resume}
+                                    </span>
+                                )}
                             </button>
                             {section === index && (
                                 <div className="grid grid-cols-3 About:grid-cols-2 sixmit:grid-cols-1 sixmit:overflow-y-scroll sixmit:justify-start sixmit:h-tre justify-center items-center">
                                     {Array.isArray(pre.arr) && pre.arr.map((item, index) => (
-                                        <div key={index} className="flex flex-col justify-center items-start p-4 w-tre h-dosh border border-slate-500 rounded-lg m-2 sixmit:py-2 sixmit:border-none sixmit:border-b sixmit:h-auto">
-                                            <h3 className="font-bold text-blue-500">
-                                                {item.title}
-                                            </h3>
-                                            <ul className="list-disc p-2">
-                                                {Object.keys(item).map((key) => {
-                                                    if (key.startsWith("context") && typeof item[key] === "string") {
-                                                        return <li key={key} className="font-light text-slate-500 text-xs">
-                                                            {item[key]}
-                                                        </li>
-                                                    }
-                                                    return null
-                                                })}
-                                            </ul>
-                                        </div>
+                                        <this.skill_list key={index} item={item} />
                                     ))}
                                 </div>
                             )}

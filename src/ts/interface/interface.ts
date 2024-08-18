@@ -12,6 +12,7 @@ export interface date_skills{
 }
 export interface dates_fullstak {
     title: string;
+    resume:string;
     [key: string]: date_skills[] | string;
 }
 export interface TogsProp {

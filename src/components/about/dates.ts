@@ -4,6 +4,7 @@ export default class Dates {
     fullstak: dates_fullstak[] = [
         {
             title: "Back End Skills",
+            resume: "Node.js, Express, NestJS, PostgreSQL, MongoDB, and security with JWT and bcrypt",
             arr: [
                 {
                     title: "Programming Lenguage",
@@ -54,6 +55,7 @@ export default class Dates {
         },
         {
             title: "FrontEnd Skills",
+            resume: "React, Next.js, TailwindCSS, and performance optimization with Webpack.",
             arr: [
                 {
                     title: "Lenguages",
@@ -91,6 +93,7 @@ export default class Dates {
         },
         {
             title: "Mutual Skills",
+            resume: "Web application development, code testing, and deployment on platforms such as Docker and Vercel",
             arr: [
                 {
                     title: "Web Applications Developer",
