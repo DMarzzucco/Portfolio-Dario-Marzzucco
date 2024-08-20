@@ -31,10 +31,6 @@ body {
   color: #c3cbd3;
 
   animation: reveal 1s ease-in-out forwards;
-
-  @media screen and (max-width:500px) {
-    padding: 9px 0;
-  }
 }
 
 /* Animation Int */

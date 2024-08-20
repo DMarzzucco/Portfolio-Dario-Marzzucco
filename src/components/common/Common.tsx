@@ -16,7 +16,7 @@ export default class Coms {
             <div className="flex flex-row mini3:flex-col justify-center items-center text-slate-300 ">
                 <div className="flex flex-col justify-center items-center w-full text-slate-300  h-full p-2 ">
                     <Image src={SoftSkills} alt="" width={160} />
-                    <h1 className="text-2xl font-Ligth text-start mx-1">
+                    <h1 className="text-2xl font-semibold text-start mx-1 text-goldlow">
                         Soft Skills
                     </h1>
                 </div>
@@ -31,51 +31,63 @@ export default class Coms {
             </div >
         )
     }
+    /**
+     * comp for dev Skills
+     * @param item 
+     * @returns Comp for devs Skills
+     */
     skill_list: React.FC<{ item: any }> = ({ item }) => {
         return (
-            <div className="flex flex-col justify-center items-start p-4 w-tre h-dosh border border-slate-500 rounded-lg m-2 sixmit:py-2 sixmit:border-none sixmit:border-b sixmit:h-auto">
+            <div className="flex flex-col justify-start items-start p-4 w-full h-auto border border-slate-500 rounded-lg m-2 sixmit:py-2 sixmit:border-none sixmit:border-b sixmit:h-auto">
                 <h3 className="font-bold text-blue-500">
                     {item.title}
                 </h3>
-                <ul className="list-disc p-2">
+                <ul className="list-disc pl-5 mt-2">
                     {Object.keys(item).map((key) => {
                         if (key.startsWith("context") && typeof item[key] === "string") {
-                            return <li key={key} className="font-light text-slate-500 text-xs">
-                                {item[key]}
-                            </li>
+                            return (
+                                <li key={key} className="font-light text-slate-500 text-sm">
+                                    {item[key]}
+                                </li>
+                            );
                         }
-                        return null
+                        return null;
                     })}
                 </ul>
             </div>
         )
     }
+    /**
+     * Habilidades de desarrollo
+     * @returns el componente Reac para habilidades de desarrollador
+     */
     skills_windows: React.FC = () => {
         const { section, handleSubmit } = useAuth()
         return (
-            <div className="flex flex-col justify-center items-center w-full ">
-                <div className="flex flex-col justify-center items-center w-full text-slate-300  h-full p-2 ">
-                    <Image src={DevSkills} alt="" width={160} />
-                    <h1 className="text-2xl font-Ligth text-start mx-1">
+
+            <div className="flex flex-col justify-center items-center w-full py-6">
+                <div className="flex flex-col justify-center items-center w-full text-slate-300 p-4">
+                    <Image src={DevSkills} alt="Development Skills" width={160} className="mb-4" />
+                    <h1 className="text-3xl font-semibold mb-4 text-goldlow">
                         Dev Skills
                     </h1>
                 </div>
-                <div className=" flex flex-col justify-center items-start w-full ">
+                <div className="flex flex-col justify-start items-start w-full px-4">
                     {It.fullstak.map((pre, index) => (
-                        <div key={index} className="my-2 p-2 ">
+                        <div key={index} className="mb-4 p-2">
                             <button
-                                className="m-1 p-2 font-bold text-xl bg-transparent text-slate-500 w-tre text-center flex flex-col justify-center items-start"
+                                className="w-full p-3 font-bold text-xl bg-transparent text-slate-500 text-left flex flex-col justify-start items-start rounded-lg hover:bg-blue-800 transition-colors duration-200"
                                 onClick={() => handleSubmit(index)}
                             >
-                                <h2>{pre.title}</h2>
+                                <h2 className="text-slate-400">{pre.title}</h2>
                                 {section !== index && (
-                                    <span className="text-xs font-light text-start">
+                                    <span className="text-sm font-light mt-1">
                                         {pre.resume}
                                     </span>
                                 )}
                             </button>
                             {section === index && (
-                                <div className="grid grid-cols-3 About:grid-cols-2 sixmit:grid-cols-1 sixmit:overflow-y-scroll sixmit:justify-start sixmit:h-tre justify-center items-center">
+                                <div className="grid grid-cols-3 gap-4 mt-4 About:grid-cols-2 sixmit:grid-cols-1 sixmit:h-tre sixmit:overflow-y-scroll">
                                     {Array.isArray(pre.arr) && pre.arr.map((item, index) => (
                                         <this.skill_list key={index} item={item} />
                                     ))}
@@ -100,7 +112,11 @@ export default class Coms {
             </>
         )
     }
-    // 
+    /**
+     * Presentation Comp
+     * @param null
+     * @returns HomeCart
+     */
     HomeCart = () => {
         return (
             <div className="w-auhrefss w-full home-cart flex flex-col

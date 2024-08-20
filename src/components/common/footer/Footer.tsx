@@ -9,38 +9,41 @@ import Coms from "./coms";
 export default function Footer() {
     const In = new Coms()
     return (
-        <footer className="w-full  flex flex-col justify-center
-        items-center bg-blackGray">
-            <div className="grid grid-cols-2 my-3 justify-center items-center
-            footer:flex footer:flex-col">
-                <Image src={Logo1Image} alt="" className="w-56 m-1" />
-                <div>
-                    <div className="flex flex-col justify-center items-start footer:items-center">
-                        <h1>CONTACT</h1>
-                        <In.FooterInf />
-                    </div>
-                    <div className="flex justify-center items-center">
+        <footer className="w-full flex flex-col bg-blackGray text-slate-300 pt-6 pb-1">
+            {/* <div className="flex flex-col md:flex-row justify-between items-center mx-4">
+                <div className="flex justify-center mb-4 md:mb-0">
+                    <Image src={Logo1Image} alt="Logo" className="w-56" />
+                </div>
+
+                <div className="flex flex-col items-center md:items-start">
+                    <h1 className="text-xl font-bold mb-2">Contact</h1>
+                    <In.FooterInf />
+                    <div className="mt-4">
                         <In.FooterEn />
                     </div>
                 </div>
             </div>
-            <div className="my-px">
+
+            <div className="flex justify-center my-4">
                 <Link
-                    href={"https://cvpdf.netlify.app/"}
-                    className="flex flex-row justify-center items-center hover:border hover:border-slate-300 p-1 rounded-xl"
+                    href="https://cvpdf.netlify.app/"
+                    className="flex items-center text-slate-300 hover:text-white hover:border hover:border-slate-300 p-2 rounded-xl transition-colors"
                 >
-                    <FontAwesomeIcon icon={faFileLines} />
-                    <p className="ml-2">Resume</p>
+                    <FontAwesomeIcon icon={faFileLines} className="text-lg" />
+                    <span className="ml-2">Resume</span>
                 </Link>
-            </div>
-            {/*  */}
-            <div className="flex my-px text-Gr text-xs">
-                <p>
-                    &copy; 2024
-                </p>
-                <Link href={'https://github.com/DMarzzucco/SysteMarzz.git'} className="mx-1 font-bold  text-white">SysteMarzz</Link>
-                <p>
-                    All rights reserved Made by Dario Marzzucco
+            </div> */}
+
+            <div className="flex flex-col md:flex-row justify-center items-center text-xs text-gray-400 mt-4">
+                <p className="mr-1">&copy; 2024</p>
+                <Link
+                    href="https://github.com/DMarzzucco/SysteMarzz.git"
+                    className="mx-1 font-bold text-white hover:underline"
+                >
+                    SysteMarzz
+                </Link>
+                <p className="ml-1">
+                    All rights reserved. Made by Dario Marzzucco
                 </p>
             </div>
         </footer>

@@ -1,6 +1,5 @@
 import React from "react";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
-import { act } from "../types/types";
 
 export interface dates_habs {
     title: string;
@@ -39,13 +38,6 @@ export interface actionsProps {
 export interface AuthProp { children: React.ReactNode }
 
 export interface useContProp {
-    state: boolean;
-    skills: boolean;
-    habs: boolean
-    about: boolean
-    action: (op: act) => void;
-
-
     section: number | null;
     handleSubmit: (index: number) => void
 }

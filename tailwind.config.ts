@@ -44,6 +44,7 @@ const config: Config = {
         'jet': 'Jetbrains Mono'
       },
       width: {
+        "400":"400px",
         '392': '392px',
         'tre': '300px',
         'doshMed': '240px',
@@ -64,7 +65,8 @@ const config: Config = {
         'sta': '#C3CBD3',
         'Orang': '#C96718',
         'Msyel': '#FFB82B',
-        'Msyel2':'#F1BF51'
+        'Msyel2':'#F1BF51',
+        "goldlow":"#949494"
       },
       // margin: {
       //  'Load': { '15px': 'auto' }
