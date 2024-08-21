@@ -1,6 +1,32 @@
-import { dates_fullstak, dates_habs } from "@/ts"
-export default class Dates {
+import { dates_fullstak, dates_habs, presentation_inf, TogsProp } from "@/ts"
+import { faGithub, faGoogle, faLinkedin, faTelegram } from "@/assets"
 
+export default class Dates {
+    /**
+     * Presentation date
+     * @interface presentation_inf[]
+     * @params name, context, title
+     * @returns presentation_inf
+     */
+    presentation_inf: presentation_inf[] = [
+        {
+            name: "Dario Marzzucco",
+
+            title: "FullStack Developer",
+
+            context: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, illo recusandae reiciendis quod sint eligendi minima harum, sed nobis laudantium labore quae soluta ad voluptas! Praesentium quasi iure quia quas?"
+        }
+    ]
+    /**
+     * Skills Devs Date
+     * @interface dates_fullstak
+     * 
+     * @property {string} title 
+     * @property {string} resume
+     * @property {[key:string]:dates_habs[] | string}
+     * 
+     * @type {dates_fullstak[]} fullstack
+     */
     fullstak: dates_fullstak[] = [
         {
             title: "Back End Skills",
@@ -79,11 +105,15 @@ export default class Dates {
                     title: "Optimization and Performance",
                     context: "Image Optimization: Use of efficient image formats and techniques such as lazy loading",
                     context2: "Minification and Compression: Compression of CSS and JS files to improve loading times.",
-                    context3: "Mejoras de Renderizado: Técnicas para evitar problemas de reflow/repaint y optimizar el rendimiento de la página."
+                    context3: "Rendering Improvements: Techniques to avoid reflow/repaint problems and optimize page performance."
                 },
                 {
                     title: "Webs APIs",
                     context: "Browser APIs: Knowledge of APIs such as Fetch API, and Axios"
+                },
+                {
+                    title: "State Management",
+                    context: "Global State: Proficiency in managing global state using tools like useContext and Redux."
                 },
                 {
                     title: "UX/UI Design",
@@ -121,6 +151,15 @@ export default class Dates {
             ]
         }
     ]
+    /**
+     * Soft Skills date
+     * @interface dates_habs
+     * 
+     * @property {string} title
+     * @property {string} context
+     * 
+     * @type {dates_habs[]} habs
+     */
     habs: dates_habs[] = [
         {
             title: "Problem Solving",
@@ -142,5 +181,34 @@ export default class Dates {
             title: "Adaptability",
             context: "Learning new technologies and adapting to changes in projects."
         },
+    ]
+    /**
+     * social template date
+     * @interface TogsProp
+     * 
+     * @property {string} src
+     * @property {string} [name]
+     * @property {IconDefinition}icon
+     * 
+     * @type {TogsProp[]} red_social
+     */
+    red_social: TogsProp[] = [
+        {
+            icon: faGithub,
+            src: "https://github.com/DMarzzucco"
+        },
+        {
+            icon: faGoogle,
+            src: "mailto:drrkermazyxokv@gmail.com"
+        },
+        {
+            icon: faLinkedin,
+            src: "https://www.linkedin.com/in/dario-marzzucco-597090283/"
+        },
+        {
+            icon: faTelegram,
+            src: "https://telegram.me/Darmarzrold77"
+        },
+
     ]
 }

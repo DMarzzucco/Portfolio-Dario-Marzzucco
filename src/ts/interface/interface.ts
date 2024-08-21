@@ -5,13 +5,17 @@ export interface dates_habs {
     title: string;
     context: string;
 }
-export interface date_skills{
-    title:string;
-    [key:string]: string |number
+export interface presentation_inf extends dates_habs {
+    name: string;
+}
+
+export interface date_skills {
+    title: string;
+    [key: string]: string | number
 }
 export interface dates_fullstak {
     title: string;
-    resume:string;
+    resume: string;
     [key: string]: date_skills[] | string;
 }
 export interface TogsProp {
@@ -27,12 +31,6 @@ export interface ButtonHeaderProps {
 export interface Infpr {
     icon: IconDefinition;
     inf: string
-
-}
-export interface actionsProps {
-    menuNav: boolean;
-    skills: boolean;
-    habbs: boolean
 }
 
 export interface AuthProp { children: React.ReactNode }

@@ -11,7 +11,8 @@ const AuthProvider: React.FC<AuthProp> = ({ children }) => {
 
     /**
      * handler index.
-     * @returns handler index
+     * @params (index: number)
+     * @returns handleSubmit
      */
     const handleSubmit = (index: number) => {
         setSection(pre => (pre === index ? null : index))

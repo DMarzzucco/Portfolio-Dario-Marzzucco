@@ -1,0 +1,1 @@
+export { default as Coms_home } from "./comps_page"

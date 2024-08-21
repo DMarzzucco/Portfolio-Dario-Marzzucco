@@ -8,90 +8,88 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { profileImage, SoftSkills, DevSkills, CMDIm, faGithub, faLink } from "@/assets";
 import { useAuth } from "@/context";
-import { Dates, DateTransfers } from "@/components";
+import { Dates } from "@/components";
 
 const mont = Montserrat({ subsets: ["latin"] })
 
 const It = new Dates();
 export default class Coms_home {
-
+    /**
+     * Template for social media links
+     * @returns {React.FC} comunications_vars
+     */
     comunications_vars: React.FC = () => {
-        const Dt = new DateTransfers()
         return (
-            <>
-                {Dt.RedSocials.map((pre, index) => (
-                    <Link key={index} className="m-2" href={pre.src}>
+            <div className=" flex space-x-4">
+                {It.red_social.map((pre, index) => (
+                    <Link key={index} href={pre.src} className="text-lg text-goldlow hover:text-gray-200 transition-colors duration-300">
                         <FontAwesomeIcon icon={pre.icon} />
                     </Link>
                 ))}
-            </>
+            </div>
         )
     }
     /**
      * Presentation Comp
      * @param null
-     * @returns HomeCart
+     * @returns {React.FC}HomeCart
      */
     HomeCart = () => {
         return (
-            <div className="w-auhrefss w-full home-cart flex flex-col
-             justify-center items-center">
-                <div
-                    className="flex flex-col justify-center
-                 items-center bg-blackGray p-2 rounded-lg w-auto ">
-
-                    <div className="flex flex-row justify-center
-                 items-center  mini3:flex-col p-2">
-
-                        <Image src={profileImage} alt="" className="w-20 rounded-full" />
-
-                        <div className="flex flex-col items-start justify-center mx-3 mini3:items-center mini3:text-center ">
-                            <h1 className="font-bold text-2xl mini3:text-20 ">Dario Marzzucco</h1>
-                            <div className="text-15 font-jet w-tre mini3:w-doshMed text-Gr text-xs font-light text-start mini3:text-center">
-                                <p>FullStack Developer</p>
+            <section className=" flex flex-col justify-center items-center h-screen w-full">
+                {It.presentation_inf.map((pre, index) => (
+                    <div key={index} className="flex flex-col md:flex-row justify-center items-center p-2 rounded-lg w-auto bg-blackGray bg-opacity-85">
+                        <div className="flex flex-col justify-center items-center  mini3:flex-col p-2">
+                            <Image src={profileImage} alt="" width={260} className=" rounded-full border border-slate-300 p-2" />
+                            <div className="flex flex-col items-center justify-center mx-3 mini3:items-center mini3:text-center">
+                                <h1 className="font-bold text-3xl md:text-6xl">{pre.name}</h1>
+                                <p className="font-semibold w-tre mini3:w-doshMed text-Gr text-lg md:text-xl text-center" >{pre.title}</p>
                             </div>
-                            <div className="flex justify-center items-center">
+                        </div>
+                        <div className="flex flex-col justify-center items-start w-full">
+                            <p className="w-tre text-lg md:text-xl">{pre.context}</p>
+                            <div className="flex justify-start items-start w-full border-t border-goldlow my-2 py-4">
                                 <this.comunications_vars />
                             </div>
                         </div>
                     </div>
-                    <p className="w-tre">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, illo recusandae reiciendis quod sint eligendi minima harum, sed nobis laudantium labore quae soluta ad voluptas! Praesentium quasi iure quia quas?
-                    </p>
-                </div>
-            </div>
-        )
-    }
-
-    habs_windows: React.FC = () => {
-        return (
-            <div className="flex flex-row mini3:flex-col justify-center items-center text-slate-300 ">
-                <div className="flex flex-col justify-center items-center w-full text-slate-300  h-full p-2 ">
-                    <Image src={SoftSkills} alt="" width={160} />
-                    <h1 className="text-2xl font-semibold text-start mx-1 text-goldlow">
-                        Soft Skills
-                    </h1>
-                </div>
-                <div className="gb  p-2 rounded-lg border-2 border-blue-500">
-                    {It.habs.map((pre, index) => (
-                        <div key={index} className="flex flex-col justify-center items-start py-1">
-                            <h2 className="text-blue-500">{pre.title}</h2>
-                            <p className="text-xs font-light text-slate-400">{pre.context}</p>
-                        </div>
-                    ))}
-                </div>
-            </div >
+                ))}
+            </section>
         )
     }
     /**
-     * comp for dev Skills
+     * Soft Skills Comp
+     * @returns {React.FC} soft skills
+     */
+    habs_windows: React.FC = () => {
+        return (
+            <section className="flex flex-col bg-blackGray bg-opacity-40 justify-center items-center h-auto py-9 px-2 border-t border-goldlow">
+                <div className="flex md:flex-row flex-col justify-center items-center w-full text-slate-300  h-full p-2 ">
+                    <Image src={SoftSkills} alt="" width={160} />
+                    <h1 className="text-2xl font-bold text-start mx-1 text-goldlow">
+                        S O F T // S K I L L
+                    </h1>
+                </div>
+                <div className="gb  p-2 rounded-lg border-2 border-goldlow">
+                    {It.habs.map((pre, index) => (
+                        <div key={index} className="flex flex-col justify-center items-start py-1">
+                            <h2 className="text-goldlow text-xl md:text-2xl font-semibold">{pre.title}</h2>
+                            <p className="md:text-lg text-xs font-light text-slate-400">{pre.context}</p>
+                        </div>
+                    ))}
+                </div>
+            </section>
+        )
+    }
+    /**
+     * List of skils for dev skills
      * @param item 
-     * @returns Comp for devs Skills
+     * @returns {React.FC} skills_list
      */
     skill_list: React.FC<{ item: any }> = ({ item }) => {
         return (
             <div className="flex flex-col justify-start items-start p-4 w-full h-auto border border-slate-500 rounded-lg m-2 sixmit:py-2 sixmit:border-none sixmit:border-b sixmit:h-auto">
-                <h3 className="font-bold text-blue-500">
+                <h3 className="font-bold text-goldlow">
                     {item.title}
                 </h3>
                 <ul className="list-disc pl-5 mt-2">
@@ -110,30 +108,29 @@ export default class Coms_home {
         )
     }
     /**
-     * Habilidades de desarrollo
-     * @returns el componente Reac para habilidades de desarrollador
+     * Dev Skills
+     * @returns {React.FC} skills_windows
      */
     skills_windows: React.FC = () => {
         const { section, handleSubmit } = useAuth()
         return (
-
-            <div className="flex flex-col justify-center items-center w-full py-6">
+            <section className="flex flex-col bg-blackGray bg-opacity-90 justify-center items-center py-6 w-full border-t border-goldlow">
                 <div className="flex flex-col justify-center items-center w-full text-slate-300 p-4">
                     <Image src={DevSkills} alt="Development Skills" width={160} className="mb-4" />
                     <h1 className="text-3xl font-semibold mb-4 text-goldlow">
-                        Dev Skills
+                        D E V // S K I L L S
                     </h1>
                 </div>
                 <div className="flex flex-col justify-start items-start w-full px-4">
                     {It.fullstak.map((pre, index) => (
                         <div key={index} className="mb-4 p-2">
                             <button
-                                className="w-full p-3 font-bold text-xl bg-transparent text-slate-500 text-left flex flex-col justify-start items-start rounded-lg hover:bg-blue-800 transition-colors duration-200"
+                                className="w-full p-3 font-bold text-xl bg-transparent text-slate-300 text-left flex flex-col justify-start items-start rounded-lg hover:bg-goldlow hover:text-blackGray transition-colors duration-200"
                                 onClick={() => handleSubmit(index)}
                             >
-                                <h2 className="text-slate-400">{pre.title}</h2>
+                                <h2>{pre.title}</h2>
                                 {section !== index && (
-                                    <span className="text-sm font-light mt-1">
+                                    <span className="text-sm font-light mt-1 text-slate-500">
                                         {pre.resume}
                                     </span>
                                 )}
@@ -148,19 +145,22 @@ export default class Coms_home {
                         </div>
                     ))}
                 </div>
-            </div>
+            </section>
         )
     }
-
+    /**
+     * Last Works Comp
+     * @returns 
+     */
     last_works: React.FC = () => {
         return (
-            <div className="flex flex-col justify-center items-start w-full px-4 max-w-4xl">
-                <h1 className="text-4xl font-bold mb-2">Last Works</h1>
-                <span className="font-light text-lg mb-6">Here are the latest projects I&apos;m working on</span>
-
+            <section className="flex flex-col justify-center items-center w-full py-8  border-t border-goldlow">
+                <div className="flex flex-col justify-center items-start w-full">
+                    <h1 className="text-4xl font-bold mb-2">Last Works</h1>
+                    <span className="font-light text-lg mb-6">Here are the latest projects I&apos;m working on</span>
+                </div>
                 {/* Card */}
-                <div className="bg-blackGray flex flex-col  justify-between items-center p-4 rounded-lg shadow-lg w-full mb-6">
-
+                <div className="bg-blackGray flex flex-col  justify-between items-center p-4 rounded-lg shadow-xl w-full mb-6">
                     {/* Image and Links */}
                     <div className="flex flex-col justify-center items-center mb-4 md:mb-0 md:mr-4">
                         <Image src={CMDIm} width={250} alt="CMS Project Image" className="rounded-lg shadow-md shadow-black" />
@@ -173,7 +173,6 @@ export default class Coms_home {
                             </Link>
                         </div>
                     </div>
-
                     {/* Context */}
                     <div className="flex flex-col justify-center items-start p-3 md:p-0 md:ml-4">
                         <h2 className="text-3xl md:text-4xl font-bold mb-2">CMS-System</h2>
@@ -183,7 +182,6 @@ export default class Coms_home {
                         </p>
                     </div>
                 </div>
-
                 {/* Footer */}
                 <div className="flex flex-row justify-center items-center w-full bg-blackGray border-t border-gray-600 py-4 px-1 rounded-xl">
                     <span className="font-light text-sm text-center">
@@ -191,7 +189,7 @@ export default class Coms_home {
                         <Link href={"/project"} className="font-bold hover:text-white transition-colors duration-300"> click here.</Link>
                     </span>
                 </div>
-            </div>
+            </section>
         )
     }
 }

@@ -22,7 +22,8 @@ body {
   place-items: center;
   /* background-color: #272a30; */
 
-  background: linear-gradient(#272a30, #272a3000), url(../../public/img/fondo.webp);
+  /* background: linear-gradient(#272a30, #272a3000), url(../../public/img/fondo.webp); */
+  background-color: #272a30;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -31,6 +32,16 @@ body {
   color: #c3cbd3;
 
   animation: reveal 1s ease-in-out forwards;
+}
+
+main {
+  padding: 0 3.4vw; 
+  margin: 0 8.8vw;  
+}
+@media (max-width: 768px) {
+  main {
+    margin: 0 0 0 0;
+  }
 }
 
 /* Animation Int */
@@ -88,6 +99,7 @@ body {
     text-wrap: balance;
   }
 }
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -97,7 +109,7 @@ button {
   font-family: inherit;
   background-color: #1a1a1a;
   color: #c3cbd3;
-  margin:1px;
+  margin: 1px;
   cursor: pointer;
   transition: border-color 0.25s;
 }

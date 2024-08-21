@@ -68,9 +68,6 @@ const config: Config = {
         'Msyel2':'#F1BF51',
         "goldlow":"#949494"
       },
-      // margin: {
-      //  'Load': { '15px': 'auto' }
-      // },
       borderRadius: {
         '50': '50%',
         '40': '40px',
