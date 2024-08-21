@@ -12,7 +12,7 @@ export default class Dates {
         {
             name: "Dario Marzzucco",
 
-            title: "FullStack Developer",
+            title: "Software Developer",
 
             context: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, illo recusandae reiciendis quod sint eligendi minima harum, sed nobis laudantium labore quae soluta ad voluptas! Praesentium quasi iure quia quas?"
         }

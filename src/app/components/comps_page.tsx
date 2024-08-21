@@ -38,7 +38,7 @@ export default class Coms_home {
         return (
             <section className=" flex flex-col justify-center items-center h-screen w-full">
                 {It.presentation_inf.map((pre, index) => (
-                    <div key={index} className="flex flex-col md:flex-row justify-center items-center p-2 rounded-lg w-auto bg-blackGray bg-opacity-85">
+                    <div key={index} className="flex flex-col md:flex-row justify-center items-center p-2 rounded-lg w-auto">
                         <div className="flex flex-col justify-center items-center  mini3:flex-col p-2">
                             <Image src={profileImage} alt="" width={260} className=" rounded-full border border-slate-300 p-2" />
                             <div className="flex flex-col items-center justify-center mx-3 mini3:items-center mini3:text-center">
@@ -63,8 +63,8 @@ export default class Coms_home {
      */
     habs_windows: React.FC = () => {
         return (
-            <section className="flex flex-col bg-blackGray bg-opacity-40 justify-center items-center h-auto py-9 px-2 border-t border-goldlow">
-                <div className="flex md:flex-row flex-col justify-center items-center w-full text-slate-300  h-full p-2 ">
+            <section className="flex flex-col justify-center items-center h-auto py-9 px-2 border-t border-goldlow">
+                <div className="flex md:flex-row flex-col md:justify-start justify-center items-center w-full text-slate-300  h-full py-4 ">
                     <Image src={SoftSkills} alt="" width={160} />
                     <h1 className="text-2xl font-bold text-start mx-1 text-goldlow">
                         S O F T // S K I L L
@@ -114,8 +114,8 @@ export default class Coms_home {
     skills_windows: React.FC = () => {
         const { section, handleSubmit } = useAuth()
         return (
-            <section className="flex flex-col bg-blackGray bg-opacity-90 justify-center items-center py-6 w-full border-t border-goldlow">
-                <div className="flex flex-col justify-center items-center w-full text-slate-300 p-4">
+            <section className="flex flex-col justify-center items-center py-6 w-full border-t border-goldlow">
+                <div className="flex flex-col md:flex-row justify-center items-center md:justify-start w-full text-slate-300 py-4">
                     <Image src={DevSkills} alt="Development Skills" width={160} className="mb-4" />
                     <h1 className="text-3xl font-semibold mb-4 text-goldlow">
                         D E V // S K I L L S
