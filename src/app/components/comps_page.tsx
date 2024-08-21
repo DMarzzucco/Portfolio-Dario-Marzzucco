@@ -6,7 +6,7 @@ import { Montserrat } from "next/font/google";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { profileImage, SoftSkills, DevSkills, CMDIm, faGithub, faLink } from "@/assets";
+import { profileImage, SoftSkills, DevSkills, CMDIm, faGithub, faLink, SolidLog, ArchSoft } from "@/assets";
 import { useAuth } from "@/context";
 import { Dates } from "@/components";
 
@@ -66,9 +66,64 @@ export default class Coms_home {
             <section className="flex flex-col justify-center items-center h-auto py-9 px-2 border-t border-goldlow">
                 <div className="flex md:flex-row flex-col md:justify-start justify-center items-center w-full text-slate-300  h-full py-4 ">
                     <Image src={SoftSkills} alt="" width={160} />
-                    <h1 className="text-2xl font-bold text-start mx-1 text-goldlow">
-                        S O F T // S K I L L
-                    </h1>
+                    <div className="flex flex-col justify-center items-center text-goldlow">
+                        <h1 className="text-2xl font-bold text-start mx-1">
+                            S O F T
+                        </h1>
+                        <p className="font-semibold">S K I L L S</p>
+                    </div>
+                </div>
+                <div className="gb  p-2 rounded-lg border-2 border-goldlow">
+                    {It.habs.map((pre, index) => (
+                        <div key={index} className="flex flex-col justify-center items-start py-1">
+                            <h2 className="text-goldlow text-xl md:text-2xl font-semibold">{pre.title}</h2>
+                            <p className="md:text-lg text-xs font-light text-slate-400">{pre.context}</p>
+                        </div>
+                    ))}
+                </div>
+            </section>
+        )
+    }
+    /**
+     * 
+     */
+    solid_windows: React.FC = () => {
+        return (
+            <section className="flex flex-col justify-center items-center h-auto py-9 px-2 border-t border-goldlow">
+                <div className="flex md:flex-row flex-col md:justify-start justify-center items-center w-full text-slate-300  h-full py-4 ">
+                    <Image src={SolidLog} alt="" width={160} />
+                    <div className="flex flex-col justify-center items-center text-goldlow">
+                        <h1 className="text-2xl font-bold text-start mx-1">
+                            S . O . L . I . D
+                        </h1>
+                        <p className="font-semibold">P R I N C I P L E S</p>
+                    </div>
+                </div>
+                <div className="gb  p-2 rounded-lg border-2 border-goldlow">
+                    {It.habs.map((pre, index) => (
+                        <div key={index} className="flex flex-col justify-center items-start py-1">
+                            <h2 className="text-goldlow text-xl md:text-2xl font-semibold">{pre.title}</h2>
+                            <p className="md:text-lg text-xs font-light text-slate-400">{pre.context}</p>
+                        </div>
+                    ))}
+                </div>
+            </section>
+        )
+    }
+    /**
+     * 
+     */
+    architecture_soft: React.FC = () => {
+        return (
+            <section className="flex flex-col justify-center items-center h-auto py-9 px-2 border-t border-goldlow">
+                <div className="flex md:flex-row flex-col md:justify-start justify-center items-center w-full text-slate-300  h-full py-4 ">
+                    <Image src={ArchSoft} alt="" width={160} />
+                    <div className="flex flex-col justify-center items-center text-goldlow">
+                        <h1 className="text-2xl font-bold text-start mx-1">
+                            S O F T W A R E
+                        </h1>
+                        <p className="font-semibold">A R C H I T E C T U R E</p>
+                    </div>
                 </div>
                 <div className="gb  p-2 rounded-lg border-2 border-goldlow">
                     {It.habs.map((pre, index) => (
@@ -117,15 +172,18 @@ export default class Coms_home {
             <section className="flex flex-col justify-center items-center py-6 w-full border-t border-goldlow">
                 <div className="flex flex-col md:flex-row justify-center items-center md:justify-start w-full text-slate-300 py-4">
                     <Image src={DevSkills} alt="Development Skills" width={160} className="mb-4" />
-                    <h1 className="text-3xl font-semibold mb-4 text-goldlow">
-                        D E V // S K I L L S
-                    </h1>
+                    <div className="flex flex-col justify-center items-center text-goldlow">
+                        <h1 className="text-2xl font-bold text-start mx-1">
+                            D E V E L O P E R
+                        </h1>
+                        <p className="font-semibold">S K I L L S</p>
+                    </div>
                 </div>
                 <div className="flex flex-col justify-start items-start w-full px-4">
                     {It.fullstak.map((pre, index) => (
                         <div key={index} className="mb-4 p-2">
                             <button
-                                className="w-full p-3 font-bold text-xl bg-transparent text-slate-300 text-left flex flex-col justify-start items-start rounded-lg hover:bg-goldlow hover:text-blackGray transition-colors duration-200"
+                                className="w-full p-3 font-bold text-xl bg-transparent text-goldlow text-left flex flex-col justify-start items-start rounded-lg hover:bg-goldlow hover:text-blackGray transition-colors duration-200"
                                 onClick={() => handleSubmit(index)}
                             >
                                 <h2>{pre.title}</h2>
