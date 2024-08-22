@@ -8,25 +8,31 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { profileImage, SoftSkills, DevSkills, CMDIm, faGithub, faLink, SolidLog, ArchSoft } from "@/assets";
 import { useAuth } from "@/context";
-import { Dates } from "@/components";
+import { Dates, share_comps } from "@/components";
 
 const mont = Montserrat({ subsets: ["latin"] })
 
 const It = new Dates();
+const comp = new share_comps()
 export default class Coms_home {
-    /**
-     * Template for social media links
-     * @returns {React.FC} comunications_vars
-     */
-    comunications_vars: React.FC = () => {
+    header_page: React.FC = () => {
         return (
-            <div className=" flex space-x-4">
-                {It.red_social.map((pre, index) => (
-                    <Link key={index} href={pre.src} className="text-lg text-goldlow hover:text-gray-200 transition-colors duration-300">
-                        <FontAwesomeIcon icon={pre.icon} />
-                    </Link>
-                ))}
-            </div>
+            <header className="flex flex-col justify-center items-center w-full text-slate-300">
+                <nav className="flex flex-row justify-center items-center w-full">
+                    {comp.header_links.map((pre, index) => (
+                        <a
+                            key={index}
+                            href={pre.href}
+                            className="mx-1 md:mx-3 flex flex-col justify-center items-center text-xs md:text-lg font-semibold"
+                        >
+                            {pre.title}
+                        </a>
+                    ))}
+                </nav>
+                <div className="border-t border-goldlow w-full">
+                    <p className="text-xl font-bold">S K I L L S</p>
+                </div>
+            </header>
         )
     }
     /**
@@ -49,117 +55,12 @@ export default class Coms_home {
                         <div className="flex flex-col justify-center items-start w-full">
                             <p className="w-tre text-lg md:text-xl">{pre.context}</p>
                             <div className="flex justify-start items-start w-full border-t border-goldlow my-2 py-4">
-                                <this.comunications_vars />
+                                <comp.comunications_vars />
                             </div>
                         </div>
                     </div>
                 ))}
             </section>
-        )
-    }
-    /**
-     * Soft Skills Comp
-     * @returns {React.FC} soft skills
-     */
-    habs_windows: React.FC = () => {
-        return (
-            <section className="flex flex-col justify-center items-center h-auto py-9 px-2 border-t border-goldlow">
-                <div className="flex md:flex-row flex-col md:justify-start justify-center items-center w-full text-slate-300  h-full py-4 ">
-                    <Image src={SoftSkills} alt="" width={160} />
-                    <div className="flex flex-col justify-center items-center text-goldlow">
-                        <h1 className="text-2xl font-bold text-start mx-1">
-                            S O F T
-                        </h1>
-                        <p className="font-semibold">S K I L L S</p>
-                    </div>
-                </div>
-                <div className="gb  p-2 rounded-lg border-2 border-goldlow">
-                    {It.habs.map((pre, index) => (
-                        <div key={index} className="flex flex-col justify-center items-start py-1">
-                            <h2 className="text-goldlow text-xl md:text-2xl font-semibold">{pre.title}</h2>
-                            <p className="md:text-lg text-xs font-light text-slate-400">{pre.context}</p>
-                        </div>
-                    ))}
-                </div>
-            </section>
-        )
-    }
-    /**
-     * 
-     */
-    solid_windows: React.FC = () => {
-        return (
-            <section className="flex flex-col justify-center items-center h-auto py-9 px-2 border-t border-goldlow">
-                <div className="flex md:flex-row flex-col md:justify-start justify-center items-center w-full text-slate-300  h-full py-4 ">
-                    <Image src={SolidLog} alt="" width={160} />
-                    <div className="flex flex-col justify-center items-center text-goldlow">
-                        <h1 className="text-2xl font-bold text-start mx-1">
-                            S . O . L . I . D
-                        </h1>
-                        <p className="font-semibold">P R I N C I P L E S</p>
-                    </div>
-                </div>
-                <div className="gb  p-2 rounded-lg border-2 border-goldlow">
-                    {It.habs.map((pre, index) => (
-                        <div key={index} className="flex flex-col justify-center items-start py-1">
-                            <h2 className="text-goldlow text-xl md:text-2xl font-semibold">{pre.title}</h2>
-                            <p className="md:text-lg text-xs font-light text-slate-400">{pre.context}</p>
-                        </div>
-                    ))}
-                </div>
-            </section>
-        )
-    }
-    /**
-     * 
-     */
-    architecture_soft: React.FC = () => {
-        return (
-            <section className="flex flex-col justify-center items-center h-auto py-9 px-2 border-t border-goldlow">
-                <div className="flex md:flex-row flex-col md:justify-start justify-center items-center w-full text-slate-300  h-full py-4 ">
-                    <Image src={ArchSoft} alt="" width={160} />
-                    <div className="flex flex-col justify-center items-center text-goldlow">
-                        <h1 className="text-2xl font-bold text-start mx-1">
-                            S O F T W A R E
-                        </h1>
-                        <p className="font-semibold">A R C H I T E C T U R E</p>
-                    </div>
-                </div>
-                <div className="gb  p-2 rounded-lg border-2 border-goldlow">
-                    {It.habs.map((pre, index) => (
-                        <div key={index} className="flex flex-col justify-center items-start py-1">
-                            <h2 className="text-goldlow text-xl md:text-2xl font-semibold">{pre.title}</h2>
-                            <p className="md:text-lg text-xs font-light text-slate-400">{pre.context}</p>
-                        </div>
-                    ))}
-                </div>
-            </section>
-        )
-    }
-    /**
-     * List of skils for dev skills
-     * @param item 
-     * @returns {React.FC} skills_list
-     */
-    skill_list: React.FC<{ item: any }> = ({ item }) => {
-        return (
-            <div className="flex flex-col justify-start items-start p-4 w-full h-auto border border-slate-500 rounded-lg m-2 sixmit:py-2 sixmit:border-none sixmit:border-b sixmit:h-auto">
-                <h3 className="font-bold text-goldlow">
-                    {item.title}
-                </h3>
-                <ul className="list-disc pl-5 mt-2">
-                    {Object.keys(item).map((key) => {
-                        if (key.startsWith("context") && typeof item[key] === "string") {
-                            return (
-                                <li key={key} className="font-light text-slate-500 text-sm">
-                                    {item[key]}
-                                </li>
-                            );
-                        }
-                        return null;
-                    })}
-                </ul>
-            </div>
         )
     }
     /**
@@ -169,37 +70,97 @@ export default class Coms_home {
     skills_windows: React.FC = () => {
         const { section, handleSubmit } = useAuth()
         return (
-            <section className="flex flex-col justify-center items-center py-6 w-full border-t border-goldlow">
-                <div className="flex flex-col md:flex-row justify-center items-center md:justify-start w-full text-slate-300 py-4">
-                    <Image src={DevSkills} alt="Development Skills" width={160} className="mb-4" />
-                    <div className="flex flex-col justify-center items-center text-goldlow">
-                        <h1 className="text-2xl font-bold text-start mx-1">
-                            D E V E L O P E R
-                        </h1>
-                        <p className="font-semibold">S K I L L S</p>
-                    </div>
-                </div>
+            <section id="devsk" className="flex flex-col justify-center items-center py-6 w-full border-t border-goldlow">
+                <comp.title_comps src={DevSkills} title="D E V E L O P E R" next_title="S K I L L S" />
                 <div className="flex flex-col justify-start items-start w-full px-4">
                     {It.fullstak.map((pre, index) => (
                         <div key={index} className="mb-4 p-2">
-                            <button
-                                className="w-full p-3 font-bold text-xl bg-transparent text-goldlow text-left flex flex-col justify-start items-start rounded-lg hover:bg-goldlow hover:text-blackGray transition-colors duration-200"
-                                onClick={() => handleSubmit(index)}
-                            >
-                                <h2>{pre.title}</h2>
-                                {section !== index && (
-                                    <span className="text-sm font-light mt-1 text-slate-500">
-                                        {pre.resume}
-                                    </span>
-                                )}
-                            </button>
+                            <comp.action_button
+                                title={pre.title}
+                                resume={pre.resume}
+                                click={() => handleSubmit(index)}
+                                action={section === index}
+                            />
                             {section === index && (
                                 <div className="grid grid-cols-3 gap-4 mt-4 About:grid-cols-2 sixmit:grid-cols-1 sixmit:h-tre sixmit:overflow-y-scroll">
                                     {Array.isArray(pre.arr) && pre.arr.map((item, index) => (
-                                        <this.skill_list key={index} item={item} />
+                                        <comp.skill_list key={index} item={item} />
                                     ))}
                                 </div>
                             )}
+                        </div>
+                    ))}
+                </div>
+            </section>
+        )
+    }
+    /**
+     * Software Architecture Section
+     */
+    architecture_soft: React.FC = () => {
+        return (
+            <section id="archsk" className="flex flex-col justify-center items-center h-auto py-9 px-2 border-t border-goldlow">
+                <comp.title_comps src={ArchSoft} title="S O F T W A R E" next_title="A R C H I T E C T U R E" />
+                <div className=" p-2 r">
+                    {It.sof_arch_dt.map((pre, index) => (
+                        <div key={index} className="flex flex-col justify-center items-start py-4 ">
+                            <h2 className="text-goldlow text-xl md:text-2xl font-semibold">{pre.title}</h2>
+                            <p className="md:text-lg text-xs font-light text-slate-400 px-2">{pre.context}</p>
+                        </div>
+                    ))}
+                </div>
+            </section>
+        )
+    }
+    /**
+     * SOLID Principles Section
+     */
+    solid_windows: React.FC = () => {
+        const { section, handleSubmit } = useAuth()
+        return (
+            <section id="solidsk" className="flex flex-col justify-center items-center h-auto py-9 px-2 border-t border-goldlow">
+                <comp.title_comps src={SolidLog} title="S . O . L . I . D" next_title="P R I N C I P L E S" />
+                <div className="flex  justify-center items-start p-6 px-1 border-b border-l rounded-l-lg border-goldlow">
+                    <span className="md:text-lg text-xs font-semibold text-start text-goldlow">
+                        implementation of S.O.L.I.D principles that I incorporate in my projects for a scalable and maintainable architecture
+                    </span>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 justify-start items-start w-full px-4">
+                    {It.sld_date.map((pre, index) => (
+                        <div key={index} className="mb-4 p-2">
+                            <comp.action_button
+                                title={pre.title}
+                                resume={pre.resume}
+                                click={() => handleSubmit(index)}
+                                action={section === index}
+                            />
+                            {section === index && (
+                                <div className="flex flex-col justify-center items-center">
+                                    {Array.isArray(pre.arr) && pre.arr.map((item, index) => (
+                                        <comp.skill_list key={index} item={item} />
+                                    ))}
+                                </div>
+                            )}
+                        </div>
+                    ))}
+                </div>
+            </section>
+        )
+    }
+
+    /**
+     * Soft Skills Comp
+     * @returns {React.FC} soft skills
+     */
+    habs_windows: React.FC = () => {
+        return (
+            <section id="softsk" className="flex flex-col justify-center items-center h-auto py-9 px-2 border-t border-goldlow">
+                <comp.title_comps src={SoftSkills} title="S O F T" next_title="S K I L L S" />
+                <div className="gb  p-2 rounded-lg border-2 border-goldlow">
+                    {It.habs.map((pre, index) => (
+                        <div key={index} className="flex flex-col justify-center items-start py-1">
+                            <h2 className="text-goldlow text-xl md:text-2xl font-semibold">{pre.title}</h2>
+                            <p className="md:text-lg text-xs font-light text-slate-400">{pre.context}</p>
                         </div>
                     ))}
                 </div>

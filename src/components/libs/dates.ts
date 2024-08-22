@@ -1,6 +1,7 @@
 import { dates_fullstak, dates_habs, presentation_inf, TogsProp } from "@/ts"
 import { faGithub, faGoogle, faLinkedin, faTelegram } from "@/assets"
 
+
 export default class Dates {
     /**
      * Presentation date
@@ -121,35 +122,6 @@ export default class Dates {
                 },
             ]
         },
-        {
-            title: "Mutual Skills",
-            resume: "Web application development, code testing, and deployment on platforms such as Docker and Vercel",
-            arr: [
-                {
-                    title: "Web Applications Developer",
-                    context: "Content Management Systems (CMS)",
-                    context2: "Software as a Service (SaaS)",
-                    context3: "Websites"
-                },
-                {
-                    title: "Code Testing and Quality",
-                    context: "Use of testing tools and maintenance of a code structure that is readable, flexible, and scalable."
-                },
-                {
-                    title: "Deployment and Maintenance",
-                    context: "CI/CD:GitHub",
-                    context2: "Containers:Docker",
-                    context3: "Deployment Platforms: Vercel"
-                },
-                {
-                    title: "Software Architecture",
-                    context: "Monolithic",
-                    context2: "MSA:Microservices Architecture",
-                    context3: "Hybrid Arch",
-                    context4: "C/S (Client-Server)",
-                },
-            ]
-        }
     ]
     /**
      * Soft Skills date
@@ -210,5 +182,112 @@ export default class Dates {
             src: "https://telegram.me/Darmarzrold77"
         },
 
+    ]
+    /**
+     * SOLID Principles Date
+     * @interface dates_fullstak
+     * 
+     * @property {string} title 
+     * @property {string} resume
+     * @property {[key:string]:dates_habs[] | string}
+     * 
+     * @type {dates_fullstak[]} sld_date
+     */
+    sld_date: dates_fullstak[] = [
+        {
+            title: "SRP",
+            resume: "Single Responsibility Principle",
+            arr: [
+                {
+                    title: "Client",
+                    context: "Use of components with well-defined responsibilities, using managers to manage states globally without overloading individual components."
+                },
+                {
+                    title: "Server",
+                    context: "Application of SRP on services and controllers, ensuring that each service has a single responsibility. Using ORM to handle data persistence in a modular way."
+                }
+            ]
+        },
+        {
+            title: "OCP",
+            resume: "Open/Closed Principle",
+            arr: [
+                {
+                    title: "Client",
+                    context: "Extension of components without modifying existing code."
+                },
+                {
+                    title: "Server",
+                    context: "Implementation of new services and endpoints without modifying existing functionalities, facilitating the extension of the application through modules. Use of middlewares for authentication without modifying existing routes."
+                }
+            ]
+        },
+        {
+            title: "LSP",
+            resume: "Liskov Substitution Principle",
+            arr: [
+                {
+                    title: "Client",
+                    context: "Creation of components that can be reused and replaced in different contexts without breaking the application, guaranteeing compatibility across interfaces and types."
+                },
+                {
+                    title: "Server",
+                    context: "Use of classes and interfaces to ensure that implementations can be replaced without affecting the behavior of services."
+                }
+            ]
+        },
+        {
+            title: "ISP",
+            resume: "Interface Segregation Principle",
+            arr: [
+                {
+                    title: "Client",
+                    context: "Splitting interfaces, ensuring that components only implement the interfaces they really need, improving cohesion and avoiding unnecessary dependencies."
+                },
+                {
+                    title: "Server",
+                    context: "Creation of interfaces and services that are specifically designed to fulfill a particular purpose, avoiding the use of generic interfaces that do not fit the needs of each module."
+                }
+            ]
+        },
+        {
+            title: "DIP",
+            resume: "Dependency Inversion Principle",
+            arr: [
+                {
+                    title: "Client",
+                    context: "Dependency inversion using contexts and providers to manage state and dependencies, making code easier to test and maintain."
+                },
+                {
+                    title: "Server",
+                    context: "Use of dependency injection, allowing modules and services to depend on abstractions instead of concrete implementations, facilitating testing and scalability of the code."
+                }
+            ]
+        },
+
+    ]
+    /**
+     * Software Arch Dates
+     * @interface dates_habs
+     * 
+     * @type {data_habs []} soft_arch_dt
+     */
+    sof_arch_dt: dates_habs[] = [
+        {
+            title: "Monolithic Architecture:",
+            context: "Design and development of applications with a single code base that manages all functionalities in a single deployment."
+        },
+        {
+            title: "Microservices Architecture (MSA):",
+            context: "Application development using independent services that communicate with each other, facilitating scalability and maintenance."
+        },
+        {
+            title: "Client-Server(C/S):",
+            context: "Creation of applications with a client-server architecture, where the client makes requests to the server to access resources and services."
+        },
+        {
+            title: "Hybrid Architecture:",
+            context: "Implementation of hybrid approaches that combine features of monolithic and microservices-based architectures according to the needs of the project."
+        },
     ]
 }

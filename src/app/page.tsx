@@ -5,15 +5,17 @@ export default function Home() {
   const In = new Coms_home()
   return (
     <main>
+      <In.header_page/>
+
       <In.HomeCart />
 
-      <In.habs_windows />
-
-      <In.solid_windows />
+      <In.skills_windows />
 
       <In.architecture_soft />
 
-      <In.skills_windows />
+      <In.solid_windows />
+
+      <In.habs_windows />
 
       <In.last_works />
     </main>

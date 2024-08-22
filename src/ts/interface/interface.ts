@@ -8,7 +8,10 @@ export interface dates_habs {
 export interface presentation_inf extends dates_habs {
     name: string;
 }
-
+export interface link_sections {
+    title:string;
+    href:string
+}
 export interface date_skills {
     title: string;
     [key: string]: string | number
