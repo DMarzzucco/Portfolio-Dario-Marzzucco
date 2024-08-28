@@ -6,7 +6,7 @@ import { Montserrat } from "next/font/google";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { profileImage, SoftSkills, DevSkills, CMDIm, faGithub, faLink, SolidLog, ArchSoft } from "@/assets";
+import { profileImage, SoftSkills, DevSkills, faGithub, SolidLog, ArchSoft, ConvertLog } from "@/assets";
 import { useAuth } from "@/context";
 import { Dates, share_comps } from "@/components";
 
@@ -47,8 +47,12 @@ export default class Coms_home {
                     <div key={index} className="flex flex-col md:flex-row justify-center items-center p-2 rounded-lg w-auto">
                         <div className="flex flex-col justify-center items-center  mini3:flex-col p-2">
                             <Image src={profileImage} alt="" width={260} className=" rounded-full border border-slate-300 p-2" />
-                            <div className="flex flex-col items-center justify-center mx-3 mini3:items-center mini3:text-center">
-                                <h1 className="font-bold text-3xl md:text-6xl">{pre.name}</h1>
+                            <div className="flex flex-col items-center justify-center mx-3 mt-4 mini3:items-center mini3:text-center">
+                                {/* <h1 className="font-bold text-3xl md:text-6xl">{pre.name}</h1> */}
+                                <h1 className="font-bold text-2xl">
+                                    D A R I O <br /> M A R Z Z U C C O
+                                </h1>
+
                                 <p className="font-semibold w-tre mini3:w-doshMed text-Gr text-lg md:text-xl text-center" >{pre.title}</p>
                             </div>
                         </div>
@@ -175,37 +179,43 @@ export default class Coms_home {
         return (
             <section className="flex flex-col justify-center items-center w-full py-8  border-t border-goldlow">
                 <div className="flex flex-col justify-center items-start w-full">
-                    <h1 className="text-4xl font-bold mb-2">Last Works</h1>
+                    <h1 className="text-4xl font-bold mb-2">Last Project</h1>
                     <span className="font-light text-lg mb-6">Here are the latest projects I&apos;m working on</span>
                 </div>
                 {/* Card */}
                 <div className="bg-blackGray flex flex-col  justify-between items-center p-4 rounded-lg shadow-xl w-full mb-6">
                     {/* Image and Links */}
                     <div className="flex flex-col justify-center items-center mb-4 md:mb-0 md:mr-4">
-                        <Image src={CMDIm} width={250} alt="CMS Project Image" className="rounded-lg shadow-md shadow-black" />
+                        <Image src={ConvertLog} width={250} alt="CMS Project Image" className="rounded-lg shadow-md shadow-black" />
                         <div className="flex flex-row justify-center md:justify-end w-full mt-4 text-lg">
-                            <Link href={"#"} className="hover:text-white transition-colors duration-300">
+                            <Link href={"https://github.com/DMarzzucco/Convert_csv_to_json.git"} className="hover:text-white transition-colors duration-300">
                                 <FontAwesomeIcon icon={faGithub} />
                             </Link>
-                            <Link href={"#"} className="ml-3 hover:text-white transition-colors duration-300">
+                            {/* <Link href={"#"} className="ml-3 hover:text-white transition-colors duration-300">
                                 <FontAwesomeIcon icon={faLink} />
-                            </Link>
+                            </Link> */}
                         </div>
                     </div>
                     {/* Context */}
                     <div className="flex flex-col justify-center items-start p-3 md:p-0 md:ml-4">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-2">CMS-System</h2>
-                        <span className="font-medium text-xl mb-4">Content Management System</span>
+                        <h2 className="text-3xl md:text-4xl font-bold mb-2">CSV Manager</h2>
+                        <span className="font-medium text-xl mb-4">Effortless Data Upload & Management</span>
                         <p className={`text-sm md:text-base text-slate-400 leading-relaxed ${mont.className}`}>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid maiores cumque, ducimus labore molestias doloribus, necessitatibus, impedit laboriosam id obcaecati ea iure quasi hic est rem ipsum ipsa quia. Sunt!
+                            Application that allows you to load CSV files, validate your data and store them in a database. Users can perform CRUD operations on uploaded records. Includes flexible search and robust error handling.
                         </p>
                     </div>
                 </div>
                 {/* Footer */}
-                <div className="flex flex-row justify-center items-center w-full bg-blackGray border-t border-gray-600 py-4 px-1 rounded-xl">
+                {/* <div className="flex flex-row justify-center items-center w-full bg-blackGray border-t border-gray-600 py-4 px-1 rounded-xl">
                     <span className="font-light text-sm text-center">
                         If you want to see more projects I&apos;m working on,
                         <Link href={"/project"} className="font-bold hover:text-white transition-colors duration-300"> click here.</Link>
+                    </span>
+                </div> */}
+                <div className="flex flex-row justify-center items-center w-full bg-blackGray border-t border-gray-600 py-4 px-1 rounded-xl">
+                    <span className="font-light text-sm text-center">
+                        If you want to see more projects I&apos;m working on, I invite you to visit my github profile
+                        <Link href={"https://github.com/DMarzzucco"} className="font-bold hover:text-white transition-colors duration-300"> click here.</Link>
                     </span>
                 </div>
             </section>

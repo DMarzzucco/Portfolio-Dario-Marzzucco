@@ -15,7 +15,7 @@ export default class Dates {
 
             title: "Software Developer",
 
-            context: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, illo recusandae reiciendis quod sint eligendi minima harum, sed nobis laudantium labore quae soluta ad voluptas! Praesentium quasi iure quia quas?"
+            context: "Freelance software developer and Information Systems Engineering student, specialized in web application development. I leverage Node.js and TypeScript to create scalable and efficient systems, while ensuring high-performance, secure applications. Experienced in backend and frontend development with a problem-solving mindset."
         }
     ]
     /**
