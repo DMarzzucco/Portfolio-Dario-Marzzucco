@@ -1,28 +1,14 @@
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
 import React from "react";
 import Dates from "./libs/dates";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { link_sections } from "@/ts";
-
-export interface title_compProps {
-    src: StaticImport;
-    title: string;
-    next_title: string;
-}
-export interface action_props {
-    title: string;
-    resume?: string;
-    click: () => void;
-    action: boolean
-}
-const It = new Dates()
+import { title_compProps, action_props } from "@/ts"
 
 export default class share_comps {
-    /**
-     * 
-     */
+    constructor(readonly It: Dates) { }
+    
     header_links: link_sections[] = [
         {
             title: "DEVELEOPER",
@@ -46,16 +32,16 @@ export default class share_comps {
      * @param param0 
      * @returns 
      */
-    action_button: React.FC<action_props> = ({ title, resume, click, action }) => {
+    action_button: React.FC<action_props> = ({ title, context, click, action }) => {
         return (
             <button
                 className="w-full p-3 font-bold text-xl bg-transparent text-goldlow text-left flex flex-col justify-start items-start rounded-lg hover:bg-goldlow hover:text-blackGray transition-colors duration-200"
                 onClick={click}
             >
                 <h2>{title}</h2>
-                {!action && resume && (
+                {!action && context && (
                     <span className="text-sm font-light mt-1 text-slate-500">
-                        {resume}
+                        {context}
                     </span>
                 )}
             </button>
@@ -68,7 +54,7 @@ export default class share_comps {
     comunications_vars: React.FC = () => {
         return (
             <div className=" flex space-x-4">
-                {It.red_social.map((pre, index) => (
+                {this.It.red_social.map((pre, index) => (
                     <Link key={index} href={pre.src} className="text-lg text-goldlow hover:text-gray-200 transition-colors duration-300">
                         <FontAwesomeIcon icon={pre.icon} />
                     </Link>
@@ -79,10 +65,10 @@ export default class share_comps {
     /**
      * presentation template
      * @interface title_compProps
-     * @param {src,title, next_title} 
+     * @param {src,title, resume} 
      * @type {React.FC<title_compProps>} title_comp
      */
-    title_comps: React.FC<title_compProps> = ({ src, title, next_title }) => {
+    title_comps: React.FC<title_compProps> = ({ src, title, context }) => {
         return (
             <div className="flex flex-col md:flex-row justify-center items-center md:justify-start w-full text-slate-300 py-4">
                 <Image src={src} alt="" width={160} className="mb-4" />
@@ -91,7 +77,7 @@ export default class share_comps {
                         {title}
                     </h1>
                     <p className="font-semibold">
-                        {next_title}
+                        {context}
                     </p>
                 </div>
             </div>

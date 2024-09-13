@@ -11,10 +11,7 @@ export default class Dates {
      */
     presentation_inf: presentation_inf[] = [
         {
-            name: "Dario Marzzucco",
-
             title: "Software Developer",
-
             context: "Freelance software developer and Information Systems Engineering student, specialized in web application development. I leverage Node.js and TypeScript to create scalable and efficient systems, while ensuring high-performance, secure applications. Experienced in backend and frontend development with a problem-solving mindset."
         }
     ]

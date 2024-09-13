@@ -1,11 +1,11 @@
 "use client";
 
-import { AuthProp, useContProp } from "@/ts";
+import { useContProp } from "@/ts";
 import React from "react";
 
 export const AuthContext = React.createContext<useContProp | undefined>(undefined)
 
-const AuthProvider: React.FC<AuthProp> = ({ children }) => {
+const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
     const [section, setSection] = React.useState<number | null>(null)
 
@@ -17,7 +17,6 @@ const AuthProvider: React.FC<AuthProp> = ({ children }) => {
     const handleSubmit = (index: number) => {
         setSection(pre => (pre === index ? null : index))
     }
-
     return (
         <AuthContext.Provider value={{ handleSubmit, section }}>
             {children}
