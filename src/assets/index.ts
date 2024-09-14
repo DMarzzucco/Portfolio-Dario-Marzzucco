@@ -1,5 +1,4 @@
 import NavImage from "../../public/img/Nav.webp"
-import logo2Image from "../../public/img/logo2.webp"
 import profileImage from "../../public/img/profile.jpg";
 import Logo1Image from "../../public/img/logo1.webp";
 import SoftSkills from "../../public/img/soft_skill.png"
@@ -19,4 +18,4 @@ import { faAddressCard, faCode, faPhone, faBars, faXmark, faEnvelope, faDiagramP
 
 import { faGithub, faGoogle, faLinkedin, faTelegram, faGithubAlt } from "@fortawesome/free-brands-svg-icons";
 
-export { NavImage, logo2Image, profileImage, Logo1Image, faAddressCard, faCode, faPhone, faBars, faXmark, faDiagramProject, faGithub, faGoogle, faLinkedin, faTelegram, faEnvelope, faFileLines, SoftSkills, DevSkills, faBriefcase, CMDIm, faLink, ArchSoft, SolidLog, ConvertLog, Calculator, DeathTime, PsicoTer, faGithubAlt }
+export { NavImage, profileImage, Logo1Image, faAddressCard, faCode, faPhone, faBars, faXmark, faDiagramProject, faGithub, faGoogle, faLinkedin, faTelegram, faEnvelope, faFileLines, SoftSkills, DevSkills, faBriefcase, CMDIm, faLink, ArchSoft, SolidLog, ConvertLog, Calculator, DeathTime, PsicoTer, faGithubAlt }
